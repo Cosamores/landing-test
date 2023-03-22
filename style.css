@@ -910,6 +910,7 @@ transition: transform 0.2s ease-in-out; }
     width: 100%;
     flex-direction: column;
     flex: 1;
+    flex-wrap: wrap;
   }
 
   .calc-title {
@@ -988,22 +989,24 @@ transition: transform 0.2s ease-in-out; }
   }
   
 .calculator .info{
-  flex: 1;
+  flex-direction: column;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content:start;
   align-items: left;
-  padding: 5%;;
 
 }
 .info p {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 800;
+  padding-top: 50px ;
+
 }
 
 .info span {
   font-size: 20px;
-  color:#00A9E0;
+  color:#d7f5ff;
+  border-bottom: #00A9E0 solid;
 }
 
  .nota {
@@ -1012,8 +1015,9 @@ transition: transform 0.2s ease-in-out; }
   font-weight: 100;
   color: #ffffff;
   margin-top: 20px;
+  
 }
 
 .economia-final{
-  font-size: 50px !important;
+  font-size: 28px !important;
 }

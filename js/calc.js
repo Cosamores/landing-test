@@ -13,7 +13,7 @@ function calcular() {
     }
   
     const custoCombustivel = (distancia / consumoCombustivel) * precoCombustivel;
-    const custoEletricidade = (distancia * consumoEletrico) * precoEletricidade;
+    const custoEletricidade = (distancia * consumoEletrico) * (precoEletricidade/100);
    // const custoPorKm = custoCombustivel > custoEletricidade ? custoEletricidade : custoCombustivel;
     const economia = custoCombustivel - custoEletricidade
   
