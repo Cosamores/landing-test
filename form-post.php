@@ -1,21 +1,37 @@
 <?php
-if(isset($_POST['submit'])) {
-    $to = "diegocosamores@gmail.com"; // seu endereço de email aqui
-    $subject = "Novo lead de formulário"; // assunto do email
-    $name = $_POST['full_name'];
-    $email = $_POST['email'];
-    $phone = $_POST['mobile'];
-    $country = $_POST['country'];
-    $state = $_POST['state'];
-    $city = $_POST['city'];
-    $comments = $_POST['comments'];
-    
-    $message = "Nome: $name<br>Email: $email<br>Telefone: $phone<br>País: $country<br>Estado: $state<br>Cidade: $city<br>Comentários: $comments";
-    
-    $headers = "MIME-Version: 1.0" . "\r\n";
-    $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-    $headers .= 'From: <' . $email . '>' . "\r\n";
-    
-    mail($to, $subject, $message, $headers);
+// Conectar ao banco de dados
+$conn = mysqli_connect("localhost", "root", "sua_senha", "jac_test");
+
+// Verificar se o formulário foi enviado através do método POST
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+  // Obter os dados do formulário e validá-los
+  $full_name = htmlspecialchars($_POST['full_name']);
+  $email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
+  $mobile = htmlspecialchars($_POST['mobile']);
+  $comments = htmlspecialchars($_POST['comments']);
+
+  // Verificar se os dados são válidos
+  if (!$email) {
+    http_response_code(400);
+    echo 'Endereço de email inválido.';
+    exit;
+  }
+
+  // Executar a consulta SQL para inserir os dados
+  $sql = "INSERT INTO sua_tabela (full_name, email, mobile, comments) VALUES ('$full_name', '$email', '$mobile', '$comments')";
+  $result = mysqli_query($conn, $sql);
+
+  // Verificar se a consulta foi executada com sucesso
+  if (!$result) {
+    http_response_code(500);
+    echo 'Ocorreu um erro ao inserir os dados.';
+    exit;
+  }
+
+  // Exibir uma mensagem de sucesso
+  echo 'Dados inseridos com sucesso.';
 }
-?>
+
+// Fechar a conexão com o banco de dados
+mysqli_close($conn);
+?> 

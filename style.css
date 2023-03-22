@@ -72,7 +72,7 @@ a, .btn {-webkit-transition: all .3s;  transition: all .3s;}
 a img, iframe {border: none;}
 p {margin: 0 0 30px; /*color: var(--text-color);*/ line-height:1.5;}
 p:last-child{margin-bottom:0; }
-.text-lead, p.text-lead, .text-lead > *{font-size: 22px; line-height: 1.6;}
+.text-lead, p.text-lead, .text-lead > *{font-size: 22px; line-height: 1.6; text-align: justify;}
 b, strong {font-weight: bold;}
 
 .empty-15{display:table; margin:auto; clear:both; height:15px;}
@@ -904,3 +904,116 @@ transition: transform 0.2s ease-in-out; }
       display: none;
     }
   }
+
+  .calc {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  .calc-title {
+    color:#00A9E0;
+    font-size: 24px;
+  }
+  .calc form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    max-width: 500px;
+  }
+  
+  .calc label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .calc input[type="number"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .calc select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .calc button {
+    background-color: var(--main-color);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .calc button:hover {
+    background-color: #3e8e41;
+  }
+  
+  .calc input[type="text"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #f2f2f2;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .calculator{
+    display:flex;
+    justify-content: space-between;
+    background-color:#000000;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    color: white;
+    padding-top: 50px;
+  }
+  
+.calculator .info{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: left;
+  padding: 5%;;
+
+}
+.info p {
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.info span {
+  font-size: 20px;
+  color:#00A9E0;
+}
+
+ .nota {
+  font-size: 14px;
+  font-style: italic;
+  font-weight: 100;
+  color: #ffffff;
+  margin-top: 20px;
+}
+
+.economia-final{
+  font-size: 50px !important;
+}
