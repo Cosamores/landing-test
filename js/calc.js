@@ -14,16 +14,13 @@ function calcular() {
   
     const custoCombustivel = (distancia / consumoCombustivel) * precoCombustivel;
     const custoEletricidade = (distancia * consumoEletrico) * (precoEletricidade/100);
-   // const custoPorKm = custoCombustivel > custoEletricidade ? custoEletricidade : custoCombustivel;
     const economia = custoCombustivel - custoEletricidade
   
     document.getElementById('custo-combustivel').innerText = `R$ ${custoCombustivel.toFixed(2)}`;
     document.getElementById('custo-eletrico').innerText = `R$ ${custoEletricidade.toFixed(2)}`;
     document.getElementById('economia').innerText = `R$ ${economia.toFixed(2)}`;
 
-    console.log('gas :' + custoCombustivel + ' el :' + custoEletricidade +' econ :' + economia)
-  console.log(bandeira, precoEletricidade);
-}
+  }
   
 /*
   consumoEletrico = 0.1 Kw/Km => 30Kw / 302 km

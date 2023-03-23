@@ -619,8 +619,8 @@ z-index: 0; opacity: 0.15; background:#dd0707;}
 .color-section .owl-dots button.owl-dot.red{background:#a92323;}
 .color-section .owl-dots button.owl-dot.yellow{background:#c0b714;}
 .color-section .owl-dots button.owl-dot.black{background:#333333;}
-.color-section .owl-dots button.owl-dot.white{background:#ffffff; border-style: solid;}
-.color-section .owl-dots button.owl-dot.green{background:#509a4b;}
+.color-section .owl-dots button.owl-dot.white{background:#ffffff; border: 2px solid var(--dark-gray-2);}
+.color-section .owl-dots button.owl-dot.green{background:#d87fd4;}
 .color-section .owl-dots button.owl-dot.brown{background:#987233;}
 .color-section .owl-dots button.owl-dot.golden{background:#c0a05d;}
 .color-section .owl-dots button.owl-dot.blue{background:#0eb1e2;}
@@ -1037,4 +1037,21 @@ transition: transform 0.2s ease-in-out; }
 .economia-final{
   font-size: 28px !important;
 }
-  
+
+.output{
+  display: flex;
+  text-align: left;
+  padding-top: 0 auto;
+  border-radius: 20px;
+  height: 100%;
+  border: 2px dotted var(--dark-gray-2);
+  align-items: center;
+  white-space: break-spaces;
+}
+
+#endereco {
+  font-size: 14px;
+  font-weight: 600;
+  padding: 20px;
+  line-height: 35px;
+}

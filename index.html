@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xml:lang="en">    
 <head>
-    <script>
+<!--     <script>
     $(document).ready(function() {
         $('#new-form').submit(function form(event) {
         event.preventDefault(); 
@@ -28,7 +28,7 @@
     });
  
 
-    </script>
+    </script> -->
     <!-- Basic -->    
     <meta charset="UTF-8">  
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -156,12 +156,20 @@
                   
                     <div>
                         <label for="consumo-combustivel">Consumo de combustível (KM/L):</label>
-                        <input type="number" id="consumo-combustivel">
+                        <select type="number" id="consumo-combustivel">
+                            <option value="suv">SUV</option>
+                            <option value="hatch">Hatch</option>
+                        </select>
                     </div>
                   
                     <div>
                         <label for="preco-combustivel">Preço do combustível (R$ por litro):</label>
-                        <input type="number" id="preco-combustivel">
+                        <select id="preco-combustivel">
+                            <option value="4.00">R$ 4.00</option>
+                            <option value="4.50">R$ 4.50</option>
+                            <option value="5.00">R$ 5.00</option>
+                            <option value="5.50">R$ 5.50</option>
+                        </select>
                     </div>
                   
                     <div>
@@ -195,7 +203,7 @@
                     </div>
                     <span class="nota col-lg-12 col-md-12 col-sm-12">
                         * Calculo feito com base no consumo de 35Kw a cada 100Km</br></br>
-                        * O valor das tarifas corresponde a 100 quilowatts e podem ser verificados no site https://www.gov.br/aneel
+                        * O valor das tarifas corresponde a 100 quilowatts e podem ser verificados no site da <a href="https://www.gov.br/aneel">Aneel</a>
                     
                     </span>
                 </div> 
@@ -207,7 +215,7 @@
                     <div class="row">
                         <div class="col-md-8 offset-md-2 text-center">
                             <div class="heading-wrapper">
-                                <h2 class="large-heading text-uppercase"><span>Smart</span>Features</h2>
+                                <h2 class="large-heading text-uppercase">Tipos de <span>Carregamento</span></h2>
                             </div>
                             <div class="text-block text-lead">
                                 <p>A inovação do elétrico, com a sofisticação que a JAC traz para todos os seus modelos.</p>
@@ -217,16 +225,16 @@
                         <div class="col-md-12">
                             <div class="tab-section vertical-tab m-top-30">
                                 <!-- Nav tabs -->
-                                <div class="select-filter">Destaques</div>
+                                <div class="select-filter">Selecione o tipo</div>
                                 <ul class="nav nav-tabs text-uppercase" role="tablist">
                                     <li class="nav-item">
-                                        <span class="nav-link active" id="highlights-tab" data-toggle="tab" href="#highlights" role="tab" aria-controls="highlights" aria-selected="true">Destaques</span>
+                                        <span class="nav-link active" id="highlights-tab" data-toggle="tab" href="#highlights" role="tab" aria-controls="highlights" aria-selected="true">Portátil</span>
                                     </li>
                                     <li class="nav-item">
-                                        <span class="nav-link" id="exterior-tab" data-toggle="tab" href="#exterior" role="tab" aria-controls="exterior" aria-selected="false">Exterior</span>
+                                        <span class="nav-link" id="exterior-tab" data-toggle="tab" href="#exterior" role="tab" aria-controls="exterior" aria-selected="false">Eletroposto</span>
                                     </li>
                                     <li class="nav-item">
-                                        <span class="nav-link" id="interior-tab" data-toggle="tab" href="#interior" role="tab" aria-controls="interior" aria-selected="false">Interior</span>
+                                        <span class="nav-link" id="interior-tab" data-toggle="tab" href="#interior" role="tab" aria-controls="interior" aria-selected="false">Wallbox design</span>
                                     </li>
                                 </ul>
 
@@ -427,15 +435,15 @@
                                     <div class="form-group col-md-4">
                                         <input type="text" name="telefone" class="form-control" placeholder="Telefone" required="required">
                                     </div>
-                                    <div class="form-group col-md-4">
+<!--                                     <div class="form-group col-md-4">
                                         <input type="text" name="cidade" class="form-control" placeholder="Cidade" required="required">
-                                    </div>
+                                    </div> -->
                                     <div class="form-group col-md-4">
                                         <select name="horario" id="horario" class="form-control" required="required">
                                             <option disabled selected>Horário preferido</option>
-                                            <option value="manha">Manhã: 09:00 - 12:00</option>
-                                            <option value="tarde">Tarde: 13:00 - 15:00</option>
-                                            <option value="noite">Noite: 16:00 - 19:00</option>
+                                            <option id="manha" value="manha">Manhã: 09:00 - 12:00</option>
+                                            <option id="tarde" value="tarde">Tarde: 13:00 - 15:00</option>
+                                            <!-- <option id="noite" value="noite">Noite: 16:00 - 19:00</option> -->
                                         </div>
                                 </div>
                                 <div class="form-row">
@@ -443,7 +451,7 @@
                                 </div>
                                 <div class="form-row">
                                     <div class="form-group col-md-12 text-center">
-                                        <input type="submit" value="Enviar">
+                                        <input id="drive-submit" type="submit" value="Enviar">
                                     </div>
                                 </div>
                             </form>
@@ -452,12 +460,12 @@
                 </div>
             </section>
             <!-- Find Dealer Section Start -->
-            <section id="dealer" class="dealer-section">
+            <!-- <section id="dealer" class="dealer-section">
                  <div class="container">
                     <div class="row">
                         <div class="col-md-12">
                             <div class="heading-wrapper">
-                                <h2 class="large-heading text-uppercase">Encontre uma concessionária</h2>
+                                <h2 class="large-heading text-uppercase encontre">Encontre uma concessionária</h2>
                             </div>
                             <div class="text-block text-lead">
                                 <p>É muito fácil encontrar uma JAC perto de você. Confira:</p>
@@ -467,37 +475,33 @@
                             <form class="concessionarias" method="post" action="contactmail1.php">
                                 <div class="form-row">
                                     <div class="col-md-3 col-sm-6">
-                                        <select name="city" class="form-control">
-                                            <option value="">Selecione a cidade</option>
-                                            <option value="city 1">São Paulo</option>
-                                            <option value="city 2">Rio de Janeiro</option>
-                                            <option value="city 3">Brasília</option>
-                                            <option value="city 4">Curitiba</option>
-                                            <option value="city 5">Recife</option>
-                                            <option value="city 6">Porto Alegre</option>
-                                            <option value="city 5">Florianópolis</option>
+                                        <select name="city" id="city" class="form-control">
+                                            <option value="" disabled selected>Selecione a cidade</option>
+                                            <option id="sp" value='sp'>São Paulo</option>
+                                            <option id="rj" value='rj'>Rio de Janeiro</option>
+                                            <option id="bsb" value='bsb'>Brasília</option>
+                                            <option id="cwb" value='cwb'>Curitiba</option>
+                                            <option id="rec" value='rec'>Recife</option>
+                                            <option id="poa" value='poa'>Porto Alegre</option>
+                                            <option id="flor" value='flor'>Florianópolis</option>
                                         </select>
                                     </div>
                                     <div class="col-md-3 col-sm-6">
-                                        <input type="submit" class="btn fw" value="Submit" onclick="thank-you()">
+                                        <div class='output'>
+                                            <span id="endereco"></span>
+            
+                                        </div>
                                     </div>
                                 </div>
                             </form>
-                            <div class="endereco">
-                                <div id="endereco-sp"></div>
-                                <div id="endereco-rj"></div>
-                                <div id="endereco-bsb"></div>
-                                <div id="endereco-cwb"></div>
-                                <div id="endereco-rec"></div>
-                                <div id="endereco-poa"></div>
-                                <div id="endereco-flo"></div>
-                            </div>
+                            
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> -->
             <!-- Find Dealer Section End -->
        </div>
+    </body>
         <!-- Content Section End -->   
         <!--footer Start-->   
         <footer class="site-footer">
@@ -553,7 +557,7 @@
                                     <div class="widget-contact-info">
                                         <i class="fas fa-map-marker-alt"></i>
                                         <h3>Endereço</h3>
-                                        <span>3892 Fincham Road, <br />Los Angeles, CA 90017</span>
+                                        <span>Avenida Europa, 444 - Jardim Europa<br />São Paulo, São Paulo</span>
                                     </div>
                                 </div>
                             </div>
@@ -595,6 +599,8 @@
     <script src="js/owl.carousel.min.js"></script>     
     <script src="js/onpagescroll.js"></script>
     <script src="js/wow.min.js"></script>
+    <script src="js/select.js"></script>
+
 
     <!-- <script src="js/jquery.event.move.js"></script>
     <script src="js/fancybox/jquery.fancybox.min.js"></script> -->
@@ -614,5 +620,5 @@
             }, 1000);
         });
     </script> -->
-</body>
+
 </html>
