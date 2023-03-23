@@ -2,29 +2,30 @@
 <html lang="en" xml:lang="en">    
 <head>
     <script>
-  $(document).ready(function() {
-  $('#new-form').submit(function(event) {
-    event.preventDefault(); 
+    $(document).ready(function() {
+        $('#new-form').submit(function form(event) {
+        event.preventDefault(); 
 
   
-    var formData = $(this).serialize();
+        var formData = $(this).serialize();
+        console.log(formData);
 
+    /*  $.ajax({
+            type: 'POST',
+                url: ',
+                data: formData,
+                success: function() {
 
-    $.ajax({
-      type: 'POST',
-      url: ',
-      data: formData,
-      success: function() {
+                    alert('Formulário enviado com sucesso!');
+                },
+            
+                error: function() {
 
-        alert('Formulário enviado com sucesso!');
-      },
-      error: function() {
-
-        alert('Erro ao enviar o formulário.');
-      }
+                    alert('Erro ao enviar o formulário.');
+                }
+            }); */
+        });
     });
-  });
-});
  
 
     </script>
@@ -50,22 +51,18 @@
     <link rel="stylesheet" href="css/fontawesome.min.css" type="text/css" />
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css" />
-    <link rel="stylesheet" href="css/twentytwenty.css"  type="text/css" />
     <link rel="stylesheet" href="css/fancybox/jquery.fancybox.min.css" type="text/css" />
 
     <!-- Theme CSS -->
     <link rel="stylesheet" href="style.css" type="text/css" />
     <link rel="stylesheet" href="css/responsive.css" type="text/css" />
 
-    <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
-    <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
-
 </head>
 <body >
      <!-- Preloader start -->
-<!--     <div id="st-preloader">
+     <div id="st-preloader">
         <div class="st-preloader-wave"><img src="images/st-loader.png" alt="preloader"></div>
-    </div> -->
+    </div>
     <!-- preloader end -->
 
     <!--Main Wrapper Start-->
@@ -75,40 +72,17 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-3 logo">
-                        <!-- <a class="jac-site" href="https://www.jacmotors.com.br/" title="JAC Motors"> -->
                             <img src="images/JAC/LOGO-SHC-E-JAC-AZUL-BRANCO.png" alt="JAC logo" class="regular-logo">
-<!--                             <img src="images/JAC/LOGO-SHC-E-JAC-AZUL-bco.png" alt="car" class="sticky-logo">
- -->                     <!--    </a> -->
-                        <!-- <div class="menu-icon">
-                            <span class="top"></span>
-                            <span class="middle"></span>
-                            <span class="bottom"></span>
-                        </div> -->
                     </div>
                     <div class="col-sm-9 menu-container">
                         
                         <nav class="site-navigation">
-                           <!--  <ul class="main-menu">
-                                <li><a href="#about">About</a></li>
-                                <li><a href="#technology">Features</a></li>
-                                <li><a href="#color">variations</a></li>
-                                <li class="dropdown">
-                                    <a href="#engine">Specials</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="#">Dropdown menu 1</a></li>
-                                        <li><a href="#">Dropdown menu 2</a></li>
-                                        <li><a href="#">Dropdown menu 3</a></li>
-                                        <li><a href="#">Dropdown menu 4</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#accessories">Accessories</a></li>
-                                <li><a href="#dealer">Find Dealer</a></li>
-                            </ul> -->
-                            
                             <ul class="header-social-media">
-                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                                <li><a href="https://www.facebook.com/search/top?q=jac%20motors%20brasil"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="https://twitter.com/jacmotors_br"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="https://www.youtube.com/@jacmotorsbr"><i class="fab fa-youtube"></i></a></li>
+                                <li><a href="https://www.instagram.com/jacmotors_br/"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="https://www.linkedin.com/company/jac-motors-brasil/?originalSubdomain=br"><i class="fab fa-linkedin"></i></a></li>
                             </ul>
                         </nav>
                     </div>
@@ -138,9 +112,9 @@
                         <div class="col-md-7 banner-content">
                             <h2 class="top-sub-heading">JAC e-JS1 </h2>
                             <h1 class="large-heading"><span>Seu primeiro </br>carro do</span> Futuro</h1>
-                            <div class="text-block text-lead">
+                           <!--  <div class="text-block text-lead">
                                 <p>Real Poise, Real Power, Real Perfomance.</p>
-                            </div>
+                            </div> -->
                             <div class="btn-wrapper">
                                 <a class="btn btn-primary btn-accent has-icon" href="#book-ride"><span>Agende um Test Ride</span><i class="fas fa-arrow-right"></i></a>
                             </div>
@@ -169,22 +143,13 @@
                             </div>
                             <div class="empty-30"></div>
                         </div>
-                    </div>
-                    <!-- <div class="row">
-                        <div class="col-md-12">
-                            <div class="before-after-car-container">                   
-                                <img src="images/JAC/img3.png" alt=""/>
-                                <img src="images/JAC/img6.png" alt=""/>
-                            </div>
-                        </div>
-                    </div> -->
-                             
+                    </div>  
                 </div>
                 <div id="calculator "class="calculator">
-                    <form class="row col-lg-6 col-sm-12 calc">
-                    <div>
-                        <h4 class="calc-title">Descubra a Economia Real de Trocar seu Carro a Combustão</h4>
-                        
+                    <h4 class="calc-title">Descubra a Economia Real de Trocar seu Carro a Combustão</h4>
+
+                    <form class="row col-lg-6 col-sm-6 col-md-6 calc">
+                    <div>                        
                         <label for="distancia">Distância percorrida (KM):</label>
                         <input type="number" id="distancia">
                     </div>
@@ -199,11 +164,6 @@
                         <input type="number" id="preco-combustivel">
                     </div>
                   
-                    <!-- <div>
-                        <label for="consumo-eletrico">Consumo elétrico (kWh por 100 km):</label>
-                        <input type="number" id="consumo-eletrico">
-                    </div> -->
-                  
                     <div>
                         <label for="preco-eletricidade">Preço da eletricidade (R$ por 100 KW):</label>
                         <select value="bandeira" type="select" id="preco-eletricidade">
@@ -215,15 +175,10 @@
                   
                         <div>
                             <button type="button" onclick="calcular()">Calcular</button>
-                        </div>
-                        <span class="nota">
-                            * Calculo feito com base no consumo de 35Kw a cada 100Km</br>
-                            * O valore das tarifas corresponde a 100 quilowatts e podem ser verificados no site https://www.gov.br/aneel
-                        
-                        </span>
+                        </div>    
                     </form>
                     
-                    <div class="info col-lg-6">
+                    <div class="info col-lg-6 col-sm-6 col-md-6">
                         <div>
                             <p>Custo total em combustível fóssil:</p>
                             <span id="custo-combustivel" class="resultados"></span>
@@ -238,7 +193,11 @@
                         </div>
                         
                     </div>
-                   
+                    <span class="nota col-lg-12 col-md-12 col-sm-12">
+                        * Calculo feito com base no consumo de 35Kw a cada 100Km</br></br>
+                        * O valor das tarifas corresponde a 100 quilowatts e podem ser verificados no site https://www.gov.br/aneel
+                    
+                    </span>
                 </div> 
             </section>
             <!-- About Section End -->
@@ -297,12 +256,6 @@
                                     </div>
                                     <div class="tab-pane" id="exterior" role="tabpanel" aria-labelledby="exterior-tab">
                                         <ul class="st-gallery column-3">
-                                         <!--    <li>
-                                                <a data-fancybox="exterior-gallery" href="images/JAC/external1.png">
-                                                    <img src="images/JAC/external1.png" alt="">
-                                                    <span class="caption-text">Classic Dashboard</span>
-                                                </a>
-                                            </li> -->
                                             <li>
                                                 <a data-fancybox="exterior-gallery" href="images/JAC/img7.png">
                                                     <img src="images/JAC/img7.png" alt="">
@@ -311,7 +264,13 @@
                                             </li>
                                             <li>
                                                 <a data-fancybox="exterior-gallery" href="images/JAC/img6.png">
-                                                    <img src="images/JAC/img6.png" alt="">
+                                                    <img src="images/JAC/img6-square.png" alt="">
+                                                    <span class="caption-text">Dynamic Design</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a data-fancybox="exterior-gallery" href="images/JAC/img6.png">
+                                                    <img src="images/JAC/img4-square.png" alt="">
                                                     <span class="caption-text">Dynamic Design</span>
                                                 </a>
                                             </li>
@@ -337,23 +296,6 @@
                                                     <span class="caption-text">Push Start Button</span>
                                                 </a>
                                             </li>
-                                           <!--  <li>
-                                                <a data-fancybox="interior-gallery" href="images/JAC/internal3.jpg">
-                                                    <img src="images/JAC/internal3.jpg" alt="">
-                                                    <span class="caption-text">Smart Play Music System</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a data-fancybox="interior-gallery" href="images/gallery/image-10.jpg">
-                                                    <img src="images/gallery/image-10-s.jpg" alt="">
-                                                    <span class="caption-text">Cockpit Style Instrument Cluster</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a data-fancybox="interior-gallery" href="images/gallery/image-5.jpg">
-                                                    <img src="images/gallery/image-5-s.jpg" alt="">
-                                                    <span class="caption-text">Cool Box</span>
-                                                </a> -->
                                             </li>
                                         </ul>
                                     </div>
@@ -416,8 +358,8 @@
                                     <h4 class="icon-title text-uppercase">Potência Máxima
                                         </h4>
                                     <div class="icon-text">
-                                        45 kW / 62 cv
-                                        <span>a 150 Nm de torque</span>
+                                        45 kW e 62 cv
+                                        <span> 150 Nm de torque  </span>
                                     </div>
                                 </div>
                                 <div class="col">
@@ -425,7 +367,7 @@
                                     <h4 class="icon-title text-uppercase">Aceleração
                                         </h4>
                                     <div class="icon-text">
-                                        10,7 s
+                                        10.7 segundos
                                         <span>0 a 100km/h</span>
                                     </div>
                                 </div>
@@ -452,43 +394,12 @@
                         <div class="col-lg-4 col-md-12 text-center">
                             <div class="image-wrapper">
                                 <img src="images/JAC/sem-nome4.png" alt="" class="engine-ico" />
-                                <!-- <audio controls id="audio">
-                                    <source src="audio/carstartgarage.ogg" type="audio/wav">
-                                    <source src="audio/carstartgarage.mp3" type="audio/mpeg">
-                                </audio>  -->
-                               
                             </div>
-                        <!--     <div class="btn-wrapper start-engine m-top-30">
-                                <div class="btn-wrapper">
-                                    <a href="#calculator" class="btn btn-primary has-icon"><span>Calcule a diferença</span><i class="fas fa-arrow-right"></i></a>
-                                    <a class="btn btn-primary btn-accent play-btn" data-fancybox href="https://youtu.be/MgwONi4OkuU">
-                                        <i class="fas fa-play"></i>
-                                    </a>
-                                </div>
-                            </div> -->
                         </div>
                     </div>
                 </div>
             </section>
-            <!-- Accessories Section Start -->
-            <!-- <section id="accessories" class="accessories-section pb-0">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-10 offset-md-1 text-center">
-                            <div class="heading-wrapper">
-                                <h2 class="large-heading text-uppercase">Accessórios</h2>
-                            </div>
-                            <div class="text-block text-lead">
-                                <p>Every car has number of complex parts that help in efficient and long-term functioning of car. Wheels GLA999 accessories are easily available to any Automobile store and you will always get it at our dealers place and medium size automobile shops.</p>
-                            </div>
-                            <div class="btn-wrapper">
-                                <a href="#book-ride" class="btn btn-primary has-icon"><span>Saiba Mais</span><i class="fas fa-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <img src="images/accessories-bg.png" alt="" />
-            </section> -->
+
             <!-- book-ride Section Start -->
             <section id="book-ride" class="bookride-section light-text">
                 <div class="section-background">
@@ -505,7 +416,7 @@
                             </div>
                         </div>
                         <div class="col-md-12">
-                            <form id="new-form" class="transparent-field" method="post" action="contactmail2.php">
+                            <form id="new-form" class="transparent-field" method="post" action=form()>
                                 <div class="form-row">
                                     <div class="form-group col-md-4">
                                         <input type="text" name="full_name" class="form-control" placeholder="Seu nome completo" required="required">
@@ -514,45 +425,21 @@
                                         <input type="email" name="email" class="form-control" placeholder="Email" required="required">
                                     </div>
                                     <div class="form-group col-md-4">
-                                        <input type="text" name="mobile" class="form-control" placeholder="Telefone" required="required">
+                                        <input type="text" name="telefone" class="form-control" placeholder="Telefone" required="required">
                                     </div>
+                                    <div class="form-group col-md-4">
+                                        <input type="text" name="cidade" class="form-control" placeholder="Cidade" required="required">
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <select name="horario" id="horario" class="form-control" required="required">
+                                            <option disabled selected>Horário preferido</option>
+                                            <option value="manha">Manhã: 09:00 - 12:00</option>
+                                            <option value="tarde">Tarde: 13:00 - 15:00</option>
+                                            <option value="noite">Noite: 16:00 - 19:00</option>
+                                        </div>
                                 </div>
-                               <!--  <div class="form-row">
-                                    <div class="form-group col-md-4">
-                                        <select class="form-control" name="country">
-                                            <option value="">Select Country</option>
-                                            <option value="Country 1">Country 1</option>
-                                            <option value="Country 2">Country 2</option>
-                                            <option value="Country 3">Country 3</option>
-                                            <option value="Country 4">Country 4</option>
-                                            <option value="Country 5">Country 5</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group col-md-4">
-                                        <select class="form-control" name="state">
-                                            <option value="">Select State</option>
-                                            <option value="State 1">State 1</option>
-                                            <option value="State 2">State 2</option>
-                                            <option value="State 3">State 3</option>
-                                            <option value="State 4">State 4</option>
-                                            <option value="State 5">State 5</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group col-md-4">
-                                        <select class="form-control" name="city">
-                                            <option value="">Select City</option>
-                                            <option value="city 1">City 1</option>
-                                            <option value="city 2">City 2</option>
-                                            <option value="city 3">City 3</option>
-                                            <option value="city 4">City 4</option>
-                                            <option value="city 5">City 5</option>
-                                        </select>
-                                    </div>
-                                </div> -->
                                 <div class="form-row">
-                                    <div class="form-group col-md-12">
-                                        <textarea placeholder="Mensagem" class="form-control" name="comments"></textarea>
-                                    </div>
+
                                 </div>
                                 <div class="form-row">
                                     <div class="form-group col-md-12 text-center">
@@ -565,7 +452,7 @@
                 </div>
             </section>
             <!-- Find Dealer Section Start -->
-            <!--<section id="dealer" class="dealer-section">
+            <section id="dealer" class="dealer-section">
                  <div class="container">
                     <div class="row">
                         <div class="col-md-12">
@@ -577,36 +464,18 @@
                             </div>
                         </div>
                         <div class="col-md-12">
-                            <form method="post" action="contactmail1.php">
+                            <form class="concessionarias" method="post" action="contactmail1.php">
                                 <div class="form-row">
-                                    <div class="col-md-3 col-sm-6">
-                                         <select name="country" class="form-control">
-                                            <option value="">Select Country</option>
-                                            <option value="Country 1">Country 1</option>
-                                            <option value="Country 2">Country 2</option>
-                                            <option value="Country 3">Country 3</option>
-                                            <option value="Country 4">Country 4</option>
-                                            <option value="Country 5">Country 5</option>
-                                        </select> 
-                                    </div>
-                                    <div class="col-md-3 col-sm-6">
-                                        <select name="sate" class="form-control">
-                                            <option value="">Selecione o estado</option>
-                                            <option value="State 1">Alagoas</option>
-                                            <option value="State 2">Distrito Federal</option>
-                                            <option value="State 3">Pernambuco</option>
-                                            <option value="State 4">Rio de Janeiro</option>
-                                            <option value="State 5">São Paulo</option>
-                                        </select>
-                                    </div>
                                     <div class="col-md-3 col-sm-6">
                                         <select name="city" class="form-control">
                                             <option value="">Selecione a cidade</option>
-                                            <option value="city 1">City 1</option>
-                                            <option value="city 2">City 2</option>
-                                            <option value="city 3">City 3</option>
-                                            <option value="city 4">City 4</option>
-                                            <option value="city 5">City 5</option>
+                                            <option value="city 1">São Paulo</option>
+                                            <option value="city 2">Rio de Janeiro</option>
+                                            <option value="city 3">Brasília</option>
+                                            <option value="city 4">Curitiba</option>
+                                            <option value="city 5">Recife</option>
+                                            <option value="city 6">Porto Alegre</option>
+                                            <option value="city 5">Florianópolis</option>
                                         </select>
                                     </div>
                                     <div class="col-md-3 col-sm-6">
@@ -614,10 +483,19 @@
                                     </div>
                                 </div>
                             </form>
+                            <div class="endereco">
+                                <div id="endereco-sp"></div>
+                                <div id="endereco-rj"></div>
+                                <div id="endereco-bsb"></div>
+                                <div id="endereco-cwb"></div>
+                                <div id="endereco-rec"></div>
+                                <div id="endereco-poa"></div>
+                                <div id="endereco-flo"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </section>-->
+            </section>
             <!-- Find Dealer Section End -->
        </div>
         <!-- Content Section End -->   
@@ -629,26 +507,26 @@
                         <div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="widget">
                                 <div class="widget-heading">
-                                    <h4 class="widget-title">About Us</h4>
+                                    <h4 class="widget-title">Sobre a JAC</h4>
                                 </div>
                                 <div class="widget-contet">
                                     <img src="images/JAC/LOGO-SHC-E-JAC-AZUL-BRANCO.png" class="footer-logo" alt="">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra</p>
+                                    <p>A JAC Motors está sempre de portas abertas para você.
+                                        Aqui você encontra os nossos diversos pontos de contato para tirar dúvidas, fazer reclamações, elogiar ou saber mais sobre nossos produtos e serviços.</p>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-2 col-md-6 col-sm-6">
                             <div class="widget">
                                 <div class="widget-heading">
-                                    <h4 class="widget-title">Useful Links</h4>
+                                    <h4 class="widget-title">Links Úteis</h4>
                                 </div>
                                 <div class="widget-contet footer-menu">
                                     <ul class="menu">
                                         <li><a href="#about">Sobre</a></li>
                                         <li><a href="#technology">Características</a></li>
-                                        <li><a href="#color">Variações</a></li>
-                                        <li><a href="#engine">Specials</a></li>
-                                        <li><a href="#accessories">Acessórios</a></li>
+                                        <li><a href="#color">Cores</a></li>
+                                        <li><a href="#engine">Detalhes</a></li>
                                         <li><a href="#book-ride">Agendar test drive</a></li>
                                     </ul>
                                 </div>
@@ -663,16 +541,18 @@
                                     <div class="widget-contact-info">
                                         <i class="fas fa-phone"></i>
                                         <h3>Telefone</h3>
-                                        <span><a href="+01(123) 456 7890">+01(123) 456 7890</a></span>
+                                        <span><a href="+551138396000"></a>(11) 3839-6000</span>
+                                    </div>
+                                        
                                     </div>
                                     <div class="widget-contact-info">
                                         <i class="fas fa-envelope-open"></i>
                                         <h3>Email</h3>
-                                        <span><a href="mailtp:info@wheels.com">info@wheels.com</a></span>
+                                        <span><a href="#book-ride">Envie uma mensagem</a></span>
                                     </div>
                                     <div class="widget-contact-info">
                                         <i class="fas fa-map-marker-alt"></i>
-                                        <h3>Address</h3>
+                                        <h3>Endereço</h3>
                                         <span>3892 Fincham Road, <br />Los Angeles, CA 90017</span>
                                     </div>
                                 </div>
@@ -681,27 +561,16 @@
                         <div class="col-lg-3 col-md-6 col-sm-6">
                             <div class="widget">
                                 <div class="widget-heading">
-                                    <h4 class="widget-title">Subscribe</h4>
-                                </div>
-                                <div class="widget-contet">
-                                    <div class="newsletter-box">
-                                        <form method="post">
-                                            <input type="email" name="email" placeholder="Enter Email Address" required="" autocomplete="off" class="form-control">
-                                            <button type="submit" class="signup-btn">Sign Up</button>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="widget">
-                                <div class="widget-heading">
-                                    <h4 class="widget-title">Follow Us</h4>
+                                    <h4 class="widget-title">Siga-nos</h4>
                                 </div>
                                 <div class="widget-contet">
                                     <div class="footer-social">
                                         <ul>
-                                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                                            <li><a href="https://www.facebook.com/search/top?q=jac%20motors%20brasil"><i class="fab fa-facebook-f"></i></a></li>
+                                            <li><a href="https://twitter.com/jacmotors_br"><i class="fab fa-twitter"></i></a></li>
+                                            <li><a href="https://www.youtube.com/@jacmotorsbr"><i class="fab fa-youtube"></i></a></li>
+                                            <li><a href="https://www.instagram.com/jacmotors_br"><i class="fab fa-instagram"></i></a></li>
+                                            <li><a href="https://www.linkedin.com/company/jac-motors-brasil/?originalSubdomain=br"><i class="fab fa-linkedin"></i></a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -712,7 +581,7 @@
             </div>
             <div class="copyright text-center">
                 <div class="container">
-                    <div class="copyright-text">© 2020 Wheels. Design & Developed by <a target="_blank" href="http://sacredthemes.net/">SacredThemes</a>.</div>
+                    <div class="copyright-text">© 2023 JAC Motors Brasil </div>
                 </div>
             </div>
         </footer>
@@ -727,29 +596,23 @@
     <script src="js/onpagescroll.js"></script>
     <script src="js/wow.min.js"></script>
 
-    <script src="js/jquery.event.move.js"></script>
-    <script src="js/jquery.twentytwenty.js"></script>
-    <script src="js/fancybox/jquery.fancybox.min.js"></script>
+    <!-- <script src="js/jquery.event.move.js"></script>
+    <script src="js/fancybox/jquery.fancybox.min.js"></script> -->
     <script src="js/calc.js"></script>
-    <script>
-    $(function(){
-        $(".before-after-car-container[data-orientation!='vertical']").twentytwenty({default_offset_pct: 0.7});
-    });
-    </script>
     <!-- Theme Base, Components and Settings -->
     <script src="js/theme.js"></script>
 
     <!-- Theme Custom -->
     <script src="js/custom.js"></script>
-      <script type="text/javascript">
+<!--       <script type="text/javascript">
         jQuery(function () {
             setInterval(function () {
                 jQuery("#home .overlay-bg").fadeOut("fast", function () {
-                    jQuery(this).css("background", "url(images/JAC/img1.png)");
+                    jQuery(this).css("background", "url(images/JAC/)");
                     jQuery(this).delay(500).fadeIn("fast");
                 });
             }, 1000);
         });
-    </script>
+    </script> -->
 </body>
 </html>

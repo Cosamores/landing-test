@@ -361,14 +361,6 @@ h2.large-heading span{display:block; font-size:2.225rem; color:var(--main-color)
 .power-icon .icon-text span{font-size:20px; display:block; text-transform:none; }
 .power-icon .col{position:relative; border: 2px solid rgba(255,255,255,0.2); text-align: center; padding: 30px 15px 30px; margin: 0px 15px; border-radius: 18px;}
 
-.accessories-section img{margin-top:-80px;}
-
-#audio{display:none; }
-.engine-ico.start-humming{
-  animation: humming 0.5s;
-  animation-iteration-count: infinite;
-}
-
 @keyframes humming {
   0% { transform: translate(0.5px, 0.5px) rotate(0deg); }
   10% { transform: translate(-0.5px, -0.5px) rotate(-0.2deg); }
@@ -660,16 +652,6 @@ transition: transform 0.2s ease-in-out; }
 .gallery-slider .owl-dots .owl-dot.active span{transform: scale(1);}
 
 /*--------------------------------------------------------------*
-  Before/After Car
-*--------------------------------------------------------------*/
-.before-after-car-container{margin:30px 0px 0; }
-.before-after-car-container .twentytwenty-overlay{display:none; }
-.twentytwenty-horizontal  .before-after-car-container .twentytwenty-handle::after, .twentytwenty-horizontal .before-after-car-container .twentytwenty-handle::before{background:var(--black-color); box-shadow: none;}
-.twentytwenty-horizontal .twentytwenty-handle::before, .twentytwenty-horizontal .twentytwenty-handle::after{width:0; }
-.before-after-car-container .twentytwenty-handle{border-color:var(--black-color); background: #fff;}
-.twentytwenty-left-arrow{border-right:6px solid var(--main-color);}
-.twentytwenty-right-arrow{border-left:6px solid var(--main-color);}
-/*--------------------------------------------------------------*
   Gallery
 *--------------------------------------------------------------*/
 .st-gallery{list-style:none; display:flex; flex-wrap:wrap; padding:0; margin:0; }
@@ -877,8 +859,8 @@ transition: transform 0.2s ease-in-out; }
   overflow: hidden;
 }
 @media only screen
-  and (min-width: 280px)
-  and (max-width: 820px) {
+  and (min-width: 270px)
+  and (max-width: 1000px) {
     #foglayer_01 .image01, #foglayer_01 .image02,
     #foglayer_02 .image01, #foglayer_02 .image02,
     #foglayer_03 .image01, #foglayer_03 .image02 {
@@ -900,17 +882,39 @@ transition: transform 0.2s ease-in-out; }
     .banner-content {
       left: 0;
     }
-    .site-navigation{
+    .site-navigation {
       display: none;
     }
+
+    .calculator {
+      padding-bottom: 130px !important;
+      position: relative;
+      padding-top: 120px !important;
+    }
+
+    .calculator .info {
+      margin-top: 0% !important;
+
+    }
+
+    .calculator .nota {
+      top: 85% !important;
+      position: absolute !important;
+      font-size: 12px;
   }
+
+  .calculator h4 {
+    top: 5% !important;
+    font-size: 20px;
+    position: absolute;
+  }
+}
 
   .calc {
     display: flex;
-    width: 100%;
+    width: 50%;
     flex-direction: column;
     flex: 1;
-    flex-wrap: wrap;
   }
 
   .calc-title {
@@ -959,6 +963,7 @@ transition: transform 0.2s ease-in-out; }
     margin-bottom: 10px;
     width: 100%;
     box-sizing: border-box;
+    align-items: center;
   }
   
   .calc button:hover {
@@ -977,15 +982,16 @@ transition: transform 0.2s ease-in-out; }
     text-align: center;
   }
 
-  .calculator{
-    display:flex;
+  .calculator {
+    display: flex;
     justify-content: space-between;
     background-color:#000000;
     width: 100%;
     margin: 0 auto;
     padding: 20px;
     color: white;
-    padding-top: 50px;
+    padding-top: 100px;
+
   }
   
 .calculator .info{
@@ -994,7 +1000,15 @@ transition: transform 0.2s ease-in-out; }
   flex-direction: column;
   justify-content:start;
   align-items: left;
+  padding-bottom: 10%;
+  margin-top: 2%;
+  padding-top: 0;
+  width: 50%;
+}
 
+.calculator h4 {
+  position: absolute;
+  top: 600px;
 }
 .info p {
   font-size: 22px;
@@ -1003,6 +1017,7 @@ transition: transform 0.2s ease-in-out; }
 
 }
 
+
 .info span {
   font-size: 20px;
   color:#d7f5ff;
@@ -1010,14 +1025,16 @@ transition: transform 0.2s ease-in-out; }
 }
 
  .nota {
+  position: absolute;
   font-size: 14px;
   font-style: italic;
   font-weight: 100;
   color: #ffffff;
-  margin-top: 20px;
-  
+  top: 80%;
+  left: 0;
 }
 
 .economia-final{
   font-size: 28px !important;
 }
+  
