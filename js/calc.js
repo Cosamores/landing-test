@@ -1,6 +1,7 @@
 function calcular() {
     const distancia = parseFloat(document.getElementById('distancia').value);
-    const consumoCombustivel = parseFloat(document.getElementById('consumo-combustivel').value);
+    const fossil = document.getElementById('consumo-combustivel')
+    const consumoCombustivel = parseFloat(fossil.value);
     const precoCombustivel = parseFloat(document.getElementById('preco-combustivel').value);
     const consumoEletrico = 0.1;
 

@@ -1013,15 +1013,15 @@ transition: transform 0.2s ease-in-out; }
 .info p {
   font-size: 22px;
   font-weight: 800;
-  padding-top: 50px ;
-
-}
+  padding-top: 0 auto;
+ }
 
 
 .info span {
   font-size: 20px;
   color:#d7f5ff;
   border-bottom: #00A9E0 solid;
+  line-height: 5px;
 }
 
  .nota {
