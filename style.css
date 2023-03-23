@@ -355,10 +355,10 @@ h2.large-heading span{display:block; font-size:2.225rem; color:var(--main-color)
 .pricing-text span{font-size:56px; font-weight:700; border-bottom:2px solid var(--main-color); color: var(--main-color)}
 .power-icon{margin-top:50px;}
 .power-icon .icon-img{margin:0px 0px 15px 0px; }
-.power-icon .icon-img img{max-width:90px;}
+.power-icon .icon-img img{max-width:100px;}
 .power-icon .icon-title{font-weight:500; font-size:20px;}
 .power-icon .icon-text{color:var(--main-color); font-size:30px; line-height:1.3; font-weight:500; font-family: 'Poppins', sans-serif; text-transform:uppercase; }
-.power-icon .icon-text span{font-size:20px; display:block; text-transform:none; }
+.power-icon .icon-text span{font-size:20px; display:block; text-transform:none; white-space: nowrap; text-align: inherit;}
 .power-icon .col{position:relative; border: 2px solid rgba(255,255,255,0.2); text-align: center; padding: 30px 15px 30px; margin: 0px 15px; border-radius: 18px;}
 
 @keyframes humming {
