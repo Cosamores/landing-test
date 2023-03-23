@@ -1,4 +1,4 @@
-
+/* 
 const endereco = document.querySelector('#endereco');
 
 const sp = `Pinheiros: 
@@ -67,5 +67,4 @@ const address = () => {
    
         
          */
-    
     
