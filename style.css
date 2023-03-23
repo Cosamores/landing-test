@@ -1014,6 +1014,7 @@ transition: transform 0.2s ease-in-out; }
   font-size: 22px;
   font-weight: 800;
   padding-top: 40px;
+  white-space: nowrap;
  }
 
 
