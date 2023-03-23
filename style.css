@@ -1013,7 +1013,7 @@ transition: transform 0.2s ease-in-out; }
 .info p {
   font-size: 22px;
   font-weight: 800;
-  padding-top: 0 auto;
+  padding-top: 20px;
  }
 
 
