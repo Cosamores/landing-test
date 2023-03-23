@@ -1023,6 +1023,7 @@ transition: transform 0.2s ease-in-out; }
   color:#d7f5ff;
   border-bottom: #00A9E0 solid;
   line-height: 5px;
+  white-space: nowrap;
 }
 
  .nota {
