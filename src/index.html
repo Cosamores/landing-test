@@ -157,13 +157,13 @@
             </section>
             <!-- About Section End -->
 
-            <section = id="calculator "class="calculator">
+            <section = id="calculator "class="calculator col-lg-4 col-sm-4 col-md-4">
 
                     <h4 class="calc-title">Descubra a Economia Real de Trocar seu Carro a Combustão</h4>
-
-                    <form class="row col-lg-6 col-sm-6 col-md-6 calc">
+                <div class="calc">
+                    <form class="row" >
                     <div>                        
-                        <label for="distancia">Distância percorrida (KM):</label>
+                        <label for="distancia">Distância percorrida(KM/dia):</label>
                         <input type="number" id="distancia">
                     </div>
                   
@@ -173,7 +173,6 @@
                             <option value="compacto">Compacto</option>
                             <option value="suv">SUV</option>
                             <option value="sedan">Sedan</option>
-
                         </select>
                     </div>
                   
@@ -199,22 +198,56 @@
                             <button type="button" onclick="calcular()">Calcular</button>
                         </div>    
                     </form>
-                    
-                    <div class="info col-lg-6 col-sm-6 col-md-6">
-                        <div>
-                            <p>Custo total </br>combustível fóssil:</p>
-                            <span id="custo-combustivel" class="resultados">____________________</span>
+                </div>
+                    <div class="info col-lg-8 col-sm-8 col-md-8">
+                    <div class="info-gas col-lg-6 col-sm-6 col-md-6">
+                            <div class="manutencao-combustivel">
+                            </div>
+                            <div>
+                                <p>Custo total </br>combustível</br>por dia:</p>
+                                <span id="custo-combustivel-dia" class="resultados">__________</span>
+                            </div>
+                            <div>
+                                <p>Custo total </br>combustível</br>por mês:</p>
+                                <span id="custo-combustivel-mes" class="resultados">__________</span>
+                            </div>
+                            <div>
+                                <p>Custo total </br>combustível</br>por ano:</p>
+                                <span id="custo-combustivel-ano" class="resultados">__________</span>
+                            </div>
+                    </div>
+
+                    <div class="info-eletrico col-lg-6 col-sm-6 col-md-6">
+                            <div class="manutencao-eletrico">
+                            </div>
+                            <div >
+                                <p >Custo total </br>eletricidade</br>por dia:</p>
+                                <span id="custo-eletrico-dia" class="resultados">__________</span>
+                            </div>
+                            <div>
+                                <p >Custo total </br>eletricidade</br>por mês:</p>
+                                <span id="custo-eletrico-mes" class="resultados">__________</span>
+                            </div>
+                            <div>
+                                <p >Custo total </br>eletricidade</br>por ano:</p>
+                                <span id="custo-eletrico-ano" class="resultados">__________</span>
+                            </div>
                         </div>
-                        <div >
-                            <p >Custo total </br>eletricidade:</p>
-                            <span id="custo-eletrico" class="resultados">____________________</span>
+                    </div>
+                    <div class="economia-total">    
+                        <div class="economia-label">                        
+                            <p >Economia</br>dia:</p>
+                            <span id="economia-dia" class="economia-final">__________</span>
                         </div>
                         <div class="economia-label">                        
-                            <p >Economia:</p>
-                            <span id="economia" class="economia-final">_______________</span>
+                            <p >Economia</br>mês:</p>
+                            <span id="economia-mes" class="economia-final">__________</span>
                         </div>
-                        
+                        <div class="economia-label">                        
+                            <p >Economia</br>ano:</p>
+                            <span id="economia-ano" class="economia-final">__________</span>
                     </div>
+                </div>
                     <span class="nota col-lg-12 col-md-12 col-sm-12">
                        * O tarifas elétricas correspondem a 100 quilowatts e podem ser verificadas no site da <a href="https://www.gov.br/aneel">Aneel</a>
                     

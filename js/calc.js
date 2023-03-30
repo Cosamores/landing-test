@@ -26,13 +26,30 @@ function calcular() {
             : tipoVeiculo == 'suv' ? consumo = [gasSuv, elSuv]
             :  consumo = [gasSedan, elSedan]
   
-    const custoCombustivel = (distancia / consumo[0]) * precoCombustivel;
-    const custoEletricidade = (distancia * consumo[1]) * (precoEletricidade/100);
-    const economia = custoCombustivel - custoEletricidade
+    const custoCombustivelDia = (distancia / consumo[0]) * precoCombustivel;
+    const custoEletricidadeDia = (distancia * consumo[1]) * (precoEletricidade/100);
+    const economiaDia = custoCombustivelDia - custoEletricidadeDia;
   
-    document.querySelector('#custo-combustivel').innerText = `R$ ${custoCombustivel.toFixed(2)}`;
-    document.querySelector('#custo-eletrico').innerText = `R$ ${custoEletricidade.toFixed(2)}`;
-    document.querySelector('#economia').innerText = `R$ ${economia.toFixed(2)}`;
+    const custoCombustivelMes = custoCombustivelDia * 30;
+    const custoEletricidadeMes = custoEletricidadeDia * 30;
+    const economiaMes = custoCombustivelMes - custoEletricidadeMes
+  
+    const custoCombustivelAno = custoCombustivelMes * 12;
+    const custoEletricidadeAno = custoEletricidadeMes * 12;
+    const economiaAno = custoCombustivelAno - custoEletricidadeAno;
+  
+    
+    document.querySelector('#custo-combustivel-dia').innerText = `R$ ${custoCombustivelDia.toFixed(2)}`;
+    document.querySelector('#custo-eletrico-dia').innerText = `R$ ${custoEletricidadeDia.toFixed(2)}`;
+    document.querySelector('#economia-dia').innerText = `R$ ${economiaDia.toFixed(2)}`;
+   
+    document.querySelector('#custo-combustivel-mes').innerText = `R$ ${custoCombustivelMes.toFixed(2)}`;
+    document.querySelector('#custo-eletrico-mes').innerText = `R$ ${custoEletricidadeMes.toFixed(2)}`;
+    document.querySelector('#economia-mes').innerText = `R$ ${economiaMes.toFixed(2)}`;
+
+    document.querySelector('#custo-combustivel-ano').innerText = `R$ ${custoCombustivelAno.toFixed(2)}`;
+    document.querySelector('#custo-eletrico-ano').innerText = `R$ ${custoEletricidadeAno.toFixed(2)}`;
+    document.querySelector('#economia-ano').innerText = `R$ ${economiaAno.toFixed(2)}`;
 
   }
   

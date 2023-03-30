@@ -64,8 +64,8 @@ Table of Contents
 /*--------------------------------------------------------------*
   Basic
 *--------------------------------------------------------------*/
-html{margin:0; padding:0;}
-body {color:var(--text-color); font-family: 'PT Sans', sans-serif; font-size:16px; font-weight:400; line-height:1.5; -webkit-font-smoothing:antialiased; -moz-font-smoothing:antialiased; text-rendering:optimizeLegibility; overflow-x: hidden;}
+html{margin:0; padding:0;  font-family: 'Barlow', Montserrat;}
+body {color:var(--text-color); font-weight:400; line-height:1.5; -webkit-font-smoothing:antialiased; -moz-font-smoothing:antialiased; text-rendering:optimizeLegibility; overflow-x: hidden;}
 a:active, a:focus {outline: none !important;}
 a{text-decoration: none !important; color:var(--main-color); ; }
 a:hover, a:focus {color: var(--text-color); ;}
@@ -307,7 +307,7 @@ h1.large-heading{font-size:6.75rem; color:var(--main-color); font-weight:bold; t
 h1.large-heading span{display:block; font-size:3.750rem;}
 h2.large-heading{font-size:6.25rem; line-height:1; }
 h2.large-heading span{display:block; font-size:2.225rem; color:var(--main-color); font-weight:400;}
-.banner-content{padding-top:60px; }
+.banner-content{padding-to p:60px; }
 .about-text{padding-left:120px; }
 .text-block{margin-bottom:30px; }
 .offset-y-50{-wenkit-transform:translateY(50px); transform:translateY(50px); }
@@ -900,40 +900,124 @@ transition: transform 0.2s ease-in-out; }
       padding-top: 80px !important;
       flex-direction: row;
       margin: 0 auto;
-      padding-right: 0px;
+      font: 10px;
+      max-width:100%;
+      height: 800px;
+      justify-content: center;
     }
 
     .calculator .info {
-      width: 50%;
-      margin-right: 0;
-      padding-right: 190px;
+      max-width: 100%;
+      margin: 0 auto;
+      justify-content: left;
+      align-items: flex-start;
+  
+
     }
-    
-    .calc {
-      padding-left: 30px;
-      padding-top: 20px;
-      width: 50%;
-    }
+
 
     .calculator .nota {
       padding-top: 25px;
-      position: absolute !;
+      position: absolute;
       font-size: 12px;
+      width: 100%;
   }
 
   .calculator .calc-title {
     top: 1%;
     font-size: 20px;
     position: absolute;
-    padding: 25px;
+    padding: 20px;
+    padding-bottom: 0 auto;
   }
-  
+  .calc button {
+    background-color: var(--main-color);
+    color: white;
+    padding-bottom: 10px;
+    margin-top: 10px;
+    display: flex;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 30px;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    }
+    .calc form {
+      display: flex;
+      flex-direction: column;
+      align-items:flex-start;
+      justify-content: left;
+      margin: 0;
+      max-width: 100%;
+      height: fit-content;
+      font-size: 10px !important;
+    }
+    .calc input[type="number"] {
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+      max-width: 100%;
+      height:fit-content !important;
+      box-sizing:content-box;
+    
+    }
+    .calc input[type="number"] {
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+      width: 100%;
+      height: 30px;
+      box-sizing: border-box;
+    
+    }
+    .calc select {
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+      width: 100% !important;
+      height: fit-content !important;
+      box-sizing: border-box;
+      font-weight: 500;
+    }
+
+    .economia-total {
+  display: flex;
+  flex-direction: row;
+  position:absolute;
+  bottom: 10%;
+  border: 2px dotted var(--dark-gray-2);
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
 }
+.economia-final{
+  font-size: 22px !important;
+  border-bottom: 1px solid #0178e6;
+}
+
+.economia-label {
+  padding: 10px;
+}
+
+    
+}
+
 
   .calc {
     display: flex;
     flex-direction: column;
-    flex: 1;
+    align-items: center;
+    justify-content: left;
+    padding: 10px ;
+    max-width: 80%;
+ 
   }
 
   .calc-title {
@@ -941,11 +1025,13 @@ transition: transform 0.2s ease-in-out; }
     font-size: 24px;
   }
   .calc form {
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 20px auto;
-    max-width: 500px;
+    margin: 0 auto;
+    max-width: 100%;
+    padding-left: 10px;
   }
   
   .calc label {
@@ -959,8 +1045,10 @@ transition: transform 0.2s ease-in-out; }
     border-radius: 5px;
     border: 1px solid #ccc;
     margin-bottom: 10px;
-    width: 100%;
+    max-width: 100%;
+    height: 30px;
     box-sizing: border-box;
+  
   }
   
   .calc select {
@@ -968,8 +1056,10 @@ transition: transform 0.2s ease-in-out; }
     border-radius: 5px;
     border: 1px solid #ccc;
     margin-bottom: 10px;
-    width: 100%;
+    max-width: 100%;
+    height: 30px;
     box-sizing: border-box;
+    font-weight: 500;
   }
   
   .calc button {
@@ -980,10 +1070,10 @@ transition: transform 0.2s ease-in-out; }
     border: none;
     cursor: pointer;
     margin-bottom: 10px;
-    width: 100%;
+    max-width: 100%;
     box-sizing: border-box;
     align-items: center;
-  }
+    }
   
   .calc button:hover {
     background-color: #3e8e41;
@@ -994,7 +1084,7 @@ transition: transform 0.2s ease-in-out; }
     border-radius: 5px;
     border: none;
     margin-bottom: 10px;
-    width: 100%;
+    max-width: 100%;
     box-sizing: border-box;
     background-color: #f2f2f2;
     font-size: 18px;
@@ -1003,23 +1093,25 @@ transition: transform 0.2s ease-in-out; }
 
   .calculator {
     display: flex;
-    justify-content:center;
-    align-items: center;
+    justify-content:left;
+    align-items: flex-start;
     background-color:#000000;
-    width: 100%;
+    max-width: 100%;
     margin: 0 auto;
     padding: 10px;
     color: white;
     flex-direction: row;
+    height: 700px;
   }
   
-.calculator .info{
-  flex-direction: column;
+.info{
+  flex-direction: row;
   display: flex;
-  flex-direction: column;
-  align-items: left;
-  padding-bottom: 5%;
-  padding-left: 30px;
+  align-items: flex-start;
+  padding-left: 0 auto;
+  justify-content: left;
+  padding-right: 30px;
+  padding-top: 30px;
   
 }
 
@@ -1030,17 +1122,16 @@ transition: transform 0.2s ease-in-out; }
 
 }
 .info p {
-  font-size: 22px;
+  font-size: 12px;
   font-weight: 800;
-  padding-top: 30px;
-  white-space: nowrap;
+  padding-top: 2px;
  }
 
 
 .info span {
-  font-size: 20px;
+  font-size: 16px;
   color:#d7f5ff;
-  border-bottom: #00A9E0 solid;
+  border-bottom: 1px #00A9E0 solid;
   line-height: 1px;
   white-space: nowrap;
 }
@@ -1052,12 +1143,33 @@ transition: transform 0.2s ease-in-out; }
   font-weight: 100;
   color: #ffffff;
   left: 0;
-  bottom: 0;
-  margin-bottom: 60px;
+  bottom: 2px;
+  margin-bottom: 8px;
 }
 
+.economia-total {
+  display: flex;
+  flex-direction: row;
+  position:absolute;
+  bottom: 10%;
+  border: 2px dotted var(--dark-gray-2);
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  width: 100%;
+  height: fit-content;
+}
 .economia-final{
-  font-size: 28px !important;
+  font-size: 22px !important;
+  border-bottom: 1px solid #0178e6;
+}
+
+.economia-label {
+  padding: 10px;
+}
+
+.economia-label:hover {
+  color:#3e8e41;
 }
 
 .output{
