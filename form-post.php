@@ -1,6 +1,6 @@
 <?php
 // Conectar ao banco de dados
-$conn = mysqli_connect("localhost", "root", "sua_senha", "jac_test");
+$conn = mysqli_connect("localhost", "root", "", "jac_test");
 
 // Verificar se o formulário foi enviado através do método POST
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -8,7 +8,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $full_name = htmlspecialchars($_POST['full_name']);
   $email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
   $mobile = htmlspecialchars($_POST['mobile']);
-  $comments = htmlspecialchars($_POST['comments']);
 
   // Verificar se os dados são válidos
   if (!$email) {
@@ -18,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   }
 
   // Executar a consulta SQL para inserir os dados
-  $sql = "INSERT INTO sua_tabela (full_name, email, mobile, comments) VALUES ('$full_name', '$email', '$mobile', '$comments')";
+  $sql = "INSERT INTO jac_testet (full_name, email, mobile) VALUES ('$full_name', '$email', '$mobile')";
   $result = mysqli_query($conn, $sql);
 
   // Verificar se a consulta foi executada com sucesso
@@ -31,6 +30,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   // Exibir uma mensagem de sucesso
   echo 'Dados inseridos com sucesso.';
 }
+
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 
 // Fechar a conexão com o banco de dados
 mysqli_close($conn);

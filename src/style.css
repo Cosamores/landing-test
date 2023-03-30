@@ -25,6 +25,7 @@ Table of Contents
  *--------------------------------------------------------------*/
 :root {
   --main-color:#00A9E0;
+  --main-color-transparent:#00a8e03b;
   --text-color:#3b3b3b;
   --heading-color:#000000;
   --light-gray:#eeeeee;
@@ -174,8 +175,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {margin: 0 0 15px 0; color:
 -webkit-transform: translateX(-18px); transform: translateX(-18px); transition: opacity .45s cubic-bezier(0.25,1,0.33,1),transform .45s cubic-bezier(0.25,1,0.33,1); -webkit-transition: opacity .45s cubic-bezier(0.25,1,0.33,1),-webkit-transform .45s cubic-bezier(0.25,1,0.33,1); position: relative;}
 
 .btn-primary.has-icon i{right: 14px; margin-top: 0; text-align: center; vertical-align: middle; border-radius: 50%;line-height:40px; height:40px; width:40px; -webkit-transition: all .45s cubic-bezier(0.25,1,0.33,1); transition: all .45s cubic-bezier(0.25,1,0.33,1); position: absolute; top: 50%;}
-.btn-primary.has-icon i {-webkit-transform: translateY(-50%) translateX(6px); transform: translateY(-50%) translateX(6px); color: #fff; background-color: rgb(0, 0, 0);
-box-shadow: rgba(0, 0, 0, 0.24) 0px 8px 15px;}
+.btn-primary.has-icon i {-webkit-transform: translateY(-50%) translateX(6px); transform: translateY(-50%) translateX(6px); color: #fff; background-color: rgb(0, 0, 0); box-shadow: rgba(0, 0, 0, 0.24) 0px 8px 15px;}
 
 
 .btn:hover, input[type="button"]:hover, input[type="submit"]:hover, button:hover, .btn:focus, input[type="button"]:focus, input[type="submit"]:focus, button:focus{background:transparent; color:var(--black-color); border-color:var(--black-color); -webkit-box-shadow:none; box-shadow:none;}
@@ -194,16 +194,19 @@ box-shadow: rgba(0, 0, 0, 0.24) 0px 8px 15px;}
 .btn-primary.btn-inverse:hover{background:transparent; color:var(--black-color);}
 .btn-primary.btn-inverse.has-icon:hover i{background:var(--black-color); color:var(--white-color); }
 
-.btn-primary.btn-accent{background:var(--main-color); color:var(--white-color); border-color:var(--main-color);}
+.btn-primary.btn-accent{background:transparent; color:var(--white-color); border-color:var(--main-color);}
 .btn-primary.btn-accent.has-icon i{background:var(--white-color); color:var(--black-color);}
 
-.btn-primary.btn-accent:hover{background:transparent; color:var(--black-color);}
+.btn-primary.btn-accent:hover{background:var(--main-color-transparent); color:var(--black-color);}
 .btn-primary.btn-accent.has-icon:hover i{background:var(--main-color); color:var(--white-color); }
+
+.fa-youtube{background:var(--main-color); color:var(--white-color); border-color:var(--main-color);}
+.fa-youtube{background:var(--white-color); color:var(--black-color);}
 
 
 .btn-primary.has-icon i.fa-play{font-size:16px; }
 .btn-primary.has-icon i.fa-play:before{margin-left:3px; }
-.btn-primary.play-btn{width:56px; padding:0 0 0 5px; }
+.btn-primary.play-btn{width:56px; padding:0 0 0 5px; background-color: red;}
 .btn-wrapper .btn + .btn {margin-left:15px;}
 
 .scroll-to{position:absolute; bottom:30px; height:auto; right:calc((100% - 1490px) / 2);}
@@ -263,11 +266,11 @@ header.fixed .logo img.sticky-logo{display:block; }
 .menu-icon.active span:nth-child(2) { -webkit-transform: scale(0); -ms-transform: scale(0); -o-transform: scale(0); transform: scale(0);}
 .menu-icon.active span:nth-child(3) {-webkit-transform: translateY(-10px) rotate(-135deg); -ms-transform: translateY(-10px) rotate(-135deg); -o-transform: translateY(-10px) rotate(-135deg); transform: translateY(-10px) rotate(-135deg);}
 
-
+.footer-social {overflow: hidden;}
 .site-navigation{text-align:right;}
 .site-navigation > ul{ display:block;}
-.site-navigation .main-menu {list-style:none; margin:0; padding:0; display: none;s   }
-.site-navigation .main-menu li{list-style:none; display:inline-block; padding:0px 10px; position:relative;}
+.site-navigation .main-menu {list-style:none; margin:0; padding:0; display: none;   }
+.site-navigation .main-menu li {list-style:none; display:inline-block; padding:0px 10px; position:relative;}
 .site-navigation .main-menu li a{display:block; color:#000000; padding:0px 5px; font-weight:500; font-size:16px; font-family: 'Poppins', sans-serif; line-height: 90px; position:relative;}
 .site-navigation .main-menu > li > a:after{background: var(--main-color); height: 2px; width:0; position: absolute; bottom: 28px; content: ""; left:5px; -webkit-transition:all 400ms; transition:all 400ms;}
 .site-navigation .main-menu > li > a:hover:after, .site-navigation .main-menu > li.active > a:after{width:calc(100% - 10px);}
@@ -418,6 +421,11 @@ h2.large-heading span{display:block; font-size:2.225rem; color:var(--main-color)
     filter: blur(0px);
   }
 }
+
+.yt-float {
+  display: block;
+}
+
 .racing-car .animation-text span:nth-child(1){animation-delay:1s;}
 .racing-car .animation-text span:nth-child(2){animation-delay:2s;}
 .racing-car .animation-text span:nth-child(3){animation-delay:2.5s;}
@@ -696,7 +704,7 @@ transition: transform 0.2s ease-in-out; }
 .horizontal-menu li{margin:0; padding:0px 15px; list-style:none; display:inline-block; font-size:16px; font-family: 'Poppins', sans-serif; font-weight:500; line-height:1; }
 .horizontal-menu li:not(:last-child){border-right:2px solid var(--dark-gray-2);}
 .horizontal-menu li:hover a, .horizontal-menu li a:hover{color:var(--main-color);}
-.footer-social{margin:30px 0px 0;}
+.footer-social{margin:30px 0px 0;overflow: hidden;}
 .footer-social ul{margin:0; padding:0; }
 .footer-social ul li{margin:0 5px 0 0; padding:0px 0px; list-style:none; display:inline-block; font-size:20px; line-height:1.6;}
 .footer-social ul li a {background: rgba(255,255,255,0.2);  display: block; width: 50px; height: 50px; text-align: center; line-height: 50px; border-radius: 50px;}
@@ -887,32 +895,43 @@ transition: transform 0.2s ease-in-out; }
     }
 
     .calculator {
+      display: flex;
       padding-bottom: 130px !important;
-      position: relative;
-      padding-top: 120px !important;
+      padding-top: 80px !important;
+      flex-direction: row;
+      margin: 0 auto;
+      padding-right: 0px;
     }
 
     .calculator .info {
-      margin-top: 0% !important;
-
+      width: 50%;
+      margin-right: 0;
+      padding-right: 190px;
+    }
+    
+    .calc {
+      padding-left: 30px;
+      padding-top: 20px;
+      width: 50%;
     }
 
     .calculator .nota {
-      top: 85% !important;
-      position: absolute !important;
+      padding-top: 25px;
+      position: absolute !;
       font-size: 12px;
   }
 
-  .calculator h4 {
-    top: 5% !important;
+  .calculator .calc-title {
+    top: 1%;
     font-size: 20px;
     position: absolute;
+    padding: 25px;
   }
+  
 }
 
   .calc {
     display: flex;
-    width: 50%;
     flex-direction: column;
     flex: 1;
   }
@@ -922,7 +941,6 @@ transition: transform 0.2s ease-in-out; }
     font-size: 24px;
   }
   .calc form {
-    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -932,7 +950,8 @@ transition: transform 0.2s ease-in-out; }
   
   .calc label {
     display: block;
-    margin-bottom: 5px;
+    margin: 0 auto;
+    padding: 5px;
   }
   
   .calc input[type="number"] {
@@ -984,36 +1003,36 @@ transition: transform 0.2s ease-in-out; }
 
   .calculator {
     display: flex;
-    justify-content: space-between;
+    justify-content:center;
+    align-items: center;
     background-color:#000000;
     width: 100%;
     margin: 0 auto;
-    padding: 20px;
+    padding: 10px;
     color: white;
-    padding-top: 100px;
-
+    flex-direction: row;
   }
   
 .calculator .info{
   flex-direction: column;
   display: flex;
   flex-direction: column;
-  justify-content:start;
   align-items: left;
-  padding-bottom: 10%;
-  margin-top: 2%;
-  padding-top: 0;
-  width: 50%;
+  padding-bottom: 5%;
+  padding-left: 30px;
+  
 }
 
-.calculator h4 {
+ .calc-title {
   position: absolute;
-  top: 600px;
+  padding-top: 20px;
+  top: 0;
+
 }
 .info p {
   font-size: 22px;
   font-weight: 800;
-  padding-top: 40px;
+  padding-top: 30px;
   white-space: nowrap;
  }
 
@@ -1022,7 +1041,7 @@ transition: transform 0.2s ease-in-out; }
   font-size: 20px;
   color:#d7f5ff;
   border-bottom: #00A9E0 solid;
-  line-height: 5px;
+  line-height: 1px;
   white-space: nowrap;
 }
 
@@ -1032,8 +1051,9 @@ transition: transform 0.2s ease-in-out; }
   font-style: italic;
   font-weight: 100;
   color: #ffffff;
-  top: 80%;
   left: 0;
+  bottom: 0;
+  margin-bottom: 60px;
 }
 
 .economia-final{
