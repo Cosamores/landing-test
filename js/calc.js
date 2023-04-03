@@ -14,6 +14,13 @@ function calcular() {
     const elSuv = 7.80;
     const elSedan = 8.00;
     
+    const compactoEletricoManutencao = 0.045;
+    const suvEletricoManutencao = 0.05;
+    const sedanEletricoManutecao = 0.049;
+
+    const compactoGasManutencao = 0.19;
+    const suvGasManutencao = 0.22;
+    const sedanGasManutecao = 0.21;
   
     if (isNaN(distancia) || isNaN(precoCombustivel) || isNaN(precoEletricidade)) {
       alert('Por favor, preencha todos os campos com valores válidos.');
@@ -24,7 +31,14 @@ function calcular() {
 
     tipoVeiculo == 'compacto' ? consumo = [gasCompacto, elCompacto]  
             : tipoVeiculo == 'suv' ? consumo = [gasSuv, elSuv]
-            :  consumo = [gasSedan, elSedan]
+            :  consumo = [gasSedan, elSedan];
+
+            tipoVeiculo == 'compacto' ? manutencao = [compactoGasManutencao, compactoEletricoManutencao]  
+            : tipoVeiculo == 'suv' ? manutencao = [suvGasManutencao, suvEletricoManutencao]
+            :  consumo = [sedanGasManutecao, sedanEletricoManutecao];
+
+    const gasManutencao = manutencao[0];
+    const elManutencao = manutencao[1]; 
   
     const custoCombustivelDia = (distancia / consumo[0]) * precoCombustivel;
     const custoEletricidadeDia = (distancia * consumo[1]) * (precoEletricidade/100);
@@ -38,7 +52,11 @@ function calcular() {
     const custoEletricidadeAno = custoEletricidadeMes * 12;
     const economiaAno = custoCombustivelAno - custoEletricidadeAno;
   
-    
+
+    document.querySelector('.manutencao-combustivel').innerText = `Manutenção por Km rodado: ${gasManutencao}`
+    document.querySelector('.manutencao-eletrico').innerText = `Manutenção por KM rodado:`
+
+
     document.querySelector('#custo-combustivel-dia').innerText = `R$ ${custoCombustivelDia.toFixed(2)}`;
     document.querySelector('#custo-eletrico-dia').innerText = `R$ ${custoEletricidadeDia.toFixed(2)}`;
     document.querySelector('#economia-dia').innerText = `R$ ${economiaDia.toFixed(2)}`;

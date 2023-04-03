@@ -1,6 +1,6 @@
 <?php
 // Conectar ao banco de dados
-$conn = mysqli_connect("localhost", "root", "", "jac_test");
+$conn = mysqli_connect("localhost", "user", "password", "server_name");
 
 // Verificar se o formulário foi enviado através do método POST
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   }
 
   // Executar a consulta SQL para inserir os dados
-  $sql = "INSERT INTO jac_testet (full_name, email, mobile) VALUES ('$full_name', '$email', '$mobile')";
+  $sql = "INSERT INTO bd_name (full_name, email, mobile) VALUES ('$full_name', '$email', '$mobile')";
   $result = mysqli_query($conn, $sql);
 
   // Verificar se a consulta foi executada com sucesso
