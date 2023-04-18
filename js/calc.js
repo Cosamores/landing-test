@@ -52,23 +52,31 @@ function calcular() {
     const custoEletricidadeAno = custoEletricidadeMes * 12;
     const economiaAno = custoCombustivelAno - custoEletricidadeAno;
   
+    console.log('economia dia: ' + economiaDia.toLocaleString("pt-BR", { minimumFractionDigits: 2 , style: 'currency', currency: 'BRL' }))
+    console.log('economia mês: ' + economiaMes.toLocaleString("pt-BR", { minimumFractionDigits: 2 , style: 'currency', currency: 'BRL' }))
+    console.log('economia ano: ' + economiaAno.toLocaleString("pt-BR", { minimumFractionDigits: 2 , style: 'currency', currency: 'BRL' }))
+    console.log(document.querySelector('.economia-ano'))
 
-    document.querySelector('.manutencao-combustivel').innerText = `Manutenção por Km rodado: ${gasManutencao}`
-    document.querySelector('.manutencao-eletrico').innerText = `Manutenção por KM rodado:`
+    document.querySelector('.manutencao-combustivel').innerText = ` ${gasManutencao.toLocaleString("pt-BR", { minimumFractionDigits: 2 , style: 'currency', currency: 'BRL' })}`
+    document.querySelector('.manutencao-eletrico').innerText = ` ${elManutencao.toLocaleString("pt-BR", { minimumFractionDigits: 2 , style: 'currency', currency: 'BRL' })}`
 
 
-    document.querySelector('#custo-combustivel-dia').innerText = `R$ ${custoCombustivelDia.toFixed(2)}`;
-    document.querySelector('#custo-eletrico-dia').innerText = `R$ ${custoEletricidadeDia.toFixed(2)}`;
-    document.querySelector('#economia-dia').innerText = `R$ ${economiaDia.toFixed(2)}`;
-   
-    document.querySelector('#custo-combustivel-mes').innerText = `R$ ${custoCombustivelMes.toFixed(2)}`;
-    document.querySelector('#custo-eletrico-mes').innerText = `R$ ${custoEletricidadeMes.toFixed(2)}`;
-    document.querySelector('#economia-mes').innerText = `R$ ${economiaMes.toFixed(2)}`;
+    document.querySelector('#custo-combustivel-dia').innerText = `R$ ${custoCombustivelDia.toFixed(2).toLocaleString('pt-BR', { minimumFractionDigits: 2 , style: 'currency', currency: 'BRL' })}`
+    document.querySelector('#custo-eletrico-dia').innerText = custoEletricidadeDia.toLocaleString("pt-BR", { minimumFractionDigits: 2 , style: 'currency', currency: 'BRL' });
+    document.querySelector('.economia-dia').innerText = economiaDia.toLocaleString("pt-BR", { minimumFractionDigits: 2 , style: 'currency', currency: 'BRL' });
+    document.querySelector('.economia-dia-mobile').innerText = economiaDia.toLocaleString("pt-BR", { minimumFractionDigits: 2 , style: 'currency', currency: 'BRL' });
 
-    document.querySelector('#custo-combustivel-ano').innerText = `R$ ${custoCombustivelAno.toFixed(2)}`;
-    document.querySelector('#custo-eletrico-ano').innerText = `R$ ${custoEletricidadeAno.toFixed(2)}`;
-    document.querySelector('#economia-ano').innerText = `R$ ${economiaAno.toFixed(2)}`;
+    document.querySelector('#custo-combustivel-mes').innerText = custoCombustivelMes.toLocaleString("pt-BR", { minimumFractionDigits: 2 , style: 'currency', currency: 'BRL' });
+    document.querySelector('#custo-eletrico-mes').innerText = custoEletricidadeMes.toLocaleString("pt-BR", { minimumFractionDigits: 2 , style: 'currency', currency: 'BRL' });
+    document.querySelector('.economia-mes').innerText = economiaMes.toLocaleString("pt-BR", { minimumFractionDigits: 2 , style: 'currency', currency: 'BRL' });
+    document.querySelector('.economia-mes-mobile').innerText = economiaMes.toLocaleString("pt-BR", { minimumFractionDigits: 2 , style: 'currency', currency: 'BRL' });
 
+    document.querySelector('#custo-combustivel-ano').innerText = custoCombustivelAno.toLocaleString("pt-BR", { minimumFractionDigits: 2 , style: 'currency', currency: 'BRL' });
+    document.querySelector('#custo-eletrico-ano').innerText = custoEletricidadeAno.toLocaleString("pt-BR", { minimumFractionDigits: 2 , style: 'currency', currency: 'BRL' });
+    document.querySelector('.economia-ano').innerText = economiaAno.toLocaleString("pt-BR", { minimumFractionDigits: 2 , style: 'currency', currency: 'BRL' });
+    document.querySelector('.economia-ano-mobile').innerText = economiaAno.toLocaleString("pt-BR", { minimumFractionDigits: 2 , style: 'currency', currency: 'BRL' });
+
+    
   }
   
 /*
