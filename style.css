@@ -160,7 +160,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {margin: 0 0 15px 0; color:
 .double-block-padding{padding:60px;}
 
 
-.container{max-width:1520px; width:100%;}
+.container{max-width:1920px; width:100%;}
 .small-container{max-width:1200px; width:100%; padding-right: 15px; padding-left: 15px; margin-right: auto; margin-left: auto;}
 .container-fluid{padding-right:0px; padding-left:0px;}
 .height-100{height:100vh; }
@@ -290,10 +290,12 @@ header.fixed .logo img.sticky-logo{display:block; }
   Body Content
 *--------------------------------------------------------------*/
 .main-container > section{position: relative; clear: both; border: 0; padding:80px 0px; }
-.section-background{position: absolute; top: 0; bottom: 0; left: 0; right: 0; overflow: hidden; border-radius: inherit; background-clip: padding-box; -webkit-overflow-scrolling: touch; }
+.section-background{position: absolute; top: 0; bottom: 0; left: 0; right: 0; overflow: hidden; border-radius: inherit; background-clip: padding-box; -webkit-overflow-scrolling: touch; height: 100%;}
 .section-background .background-wrapper{backface-visibility: hidden; position: absolute; left: 0px; top: 0px; width: 100%; height: 100%;overflow: hidden; border-radius: inherit; background-clip: padding-box;}
 .section-background .background-wrapper .background-inner{position: absolute; top: 0; bottom: 0; left: 0; right: 0; background-attachment: scroll; width: 100%}
 .section-background .background-wrapper .overlay-bg{position:absolute;top: 0; bottom: 0; left: 0; right: 0; background-attachment: scroll; background-size:cover; background-position:center center; }
+.overlay-bg, .background-inner, .background-wrapper{height: fit-content;}
+
 .top-sub-heading{font-weight:500; font-size:3.125rem; -webkit-text-shadow: 6px 6px 7.83px rgba(0, 0, 0, 0.18);  text-shadow:6px 6px 7.83px rgba(0, 0, 0, 0.18); line-height:1;   }
 h1.large-heading{font-size:6.75rem; color:var(--main-color); font-weight:bold; text-transform:uppercase; line-height:1; -webkit-text-shadow: 6px 6px 7.83px rgba(0, 0, 0, 0.18);  text-shadow:6px 6px 7.83px rgba(0, 0, 0, 0.18);}
 h1.large-heading span{display:block; font-size:3.750rem;}
@@ -394,8 +396,8 @@ h2.large-heading span{display:block; font-size:2.225rem; color:var(--main-color)
 .power-section {padding-bottom: 30px;}
 
 .color-section { display: flex; padding-top: 30px; padding-bottom: 60px;}
-.color-section  .color-variation-slider .owl-dots {position:absolute; top:0; margin:0px; left:0;width:50px;}
-.color-section .owl-dots button.owl-dot {margin-bottom:10px; display:inline-block; transition:all 400ms;}
+/* .color-section  .color-variation-slider .owl-dots {position:absolute; top:0; margin:0px; left:0;width:50px;}
+ */.color-section .owl-dots button.owl-dot {margin-bottom:10px; display:inline-block; transition:all 400ms;}
 .engine-specifications{margin:0; padding:0; display:flex; }
 .engine-specifications li{padding-right:30px; margin-right:30px; text-align:center; display:inline-block; flex:0 0 30%; max-width:30%; width:100%;}
 .engine-specifications span.key{font-size:18px; display: block; text-transform:uppercase; }
@@ -426,16 +428,16 @@ h2.large-heading span{display:block; font-size:2.225rem; color:var(--main-color)
 * ---------- ---------- ---- */
 
 .about-section {
-  height: 700px;
+  height: 600px;
   display: flex;
-  margin-bottom: 80px;
-  justify-content: center;
-  margin-right: 20px;
-  
-}
-.saiba-mais { display:flex; flex-direction: row; width: 100%; }
+  margin: 0;
+  justify-content: center;  
+  text-align: center;
+  padding: 0 !important;
+  }
+.saiba-mais { display:flex; flex-direction: row; width: 100%; justify-content: center;}
 
-.saiba-mais .btn-wrapper .btn {flex: 1;  margin-top: 30px; font-size: 14px; margin-left: 10px;}
+.saiba-mais .btn-wrapper .btn {flex: 1;  margin-top: 30px; font-size: 14px;}
 
 .btn-wrapper .agende .btn + .btn {margin-left:15px;}
 
@@ -650,6 +652,8 @@ table.specifications tr:last-child td, table.specifications tr:last-child th {bo
   align-items: center;
   color: #ffffff;
   justify-content: center;
+  width: 100%;
+  padding: 0 30px 0 30px;
 }
 
 
@@ -721,7 +725,7 @@ table.specifications tr:last-child td, table.specifications tr:last-child th {bo
   width:130px;
   text-align: center;
   font-weight: 800;
-
+  padding: 0 30px 0 30px;
 }
 
 .nota {
@@ -777,7 +781,7 @@ table.specifications tr:last-child td, table.specifications tr:last-child th {bo
     border: none;
     cursor: pointer;
     margin-bottom: 10px;
-    max-width: 100%;
+    max-width: 70%;
     box-sizing: border-box;
     align-items: center;
     }
@@ -797,7 +801,7 @@ table.specifications tr:last-child td, table.specifications tr:last-child th {bo
     font-size: 18px;
     text-align: center;
   }
-  
+
 .info p {
   font-size: 14px;
   font-weight: 800;
@@ -1018,10 +1022,10 @@ table.specifications tr:last-child td, table.specifications tr:last-child th {bo
     /* ------- About section ------- */
 
     .saiba-mais {justify-content: center;}
-    .saiba-mais .btn-primary.has-icon i { line-height: 15px; width: 15px; height: 15px; right: 10px;}
-    .saiba-mais .btn-wrapper .btn{ width: 100px; right: 1.5em ; font-size: 10px; padding-left: 25px;}
-    .yt-float {  margin-left: 0 !important;    }
-    
+    .saiba-mais .btn-primary.has-icon i { line-height: 25px; width: 25px; height: 25px; right: 15px;}
+    .saiba-mais .btn-wrapper .btn{ width: 200px; right: 0 ; font-size: 16px; padding-left: 45px;padding-top: 0;}
+/*     .yt-float {  margin-left: 0 !important;    }
+ */    
     #ytplayer {
       width: 192px;
       height: 144px;

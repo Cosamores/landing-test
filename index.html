@@ -1,34 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xml:lang="en">    
 <head>
-<!--     <script>
-    $(document).ready(function() {
-        $('#new-form').submit(function form(event) {
-        event.preventDefault(); 
-
-  
-        var formData = $(this).serialize();
-        console.log(formData);
-
-    /*  $.ajax({
-            type: 'POST',
-                url: ',
-                data: formData,
-                success: function() {
-
-                    alert('Formulário enviado com sucesso!');
-                },
-            
-                error: function() {
-
-                    alert('Erro ao enviar o formulário.');
-                }
-            }); */
-        });
-    });
- 
-
-    </script> -->
     <!-- Basic -->    
     <meta charset="UTF-8">  
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -98,10 +70,10 @@
                     <div class="background-wrapper">
                         <div class="background-inner" background-repeat: no-repeat;background-position: center center; background-size: cover; background-color:#040404;">
                         <video class="background-inner pc" autoplay loop muted >
-                            <source src='./images/JAC/E-JS1_wide.mp4' type="video/mp4">
+                            <source src='./images/JAC/esj1_vertical.mp4' type="video/mp4">
                             </video>
                             <video class="background-inner mobile" autoplay loop muted >
-                            <source src='./images/JAC/E-JS1_Vertical.mp4' type="video/mp4">
+                            <source src='./images/JAC/ejs1_vertical-curto.mp4' type="video/mp4">
                             </video>
                         </div>
                         <div class="overlay-bg"></div>
@@ -134,13 +106,14 @@
                             </div>
                             
                             <div class="text-block text-lead">
-                                <p>Desenvolvido em parceria com o Grupo Volkswagen, o E-JS1 atua em um segmento absolutamente inédito, o de compacto urbano, compatibilizando a aplicação ideal para um veículo totalmente elétrico! </br>O JAC e-JS1 é a escolha inteligente e sustentável para o seu dia a dia. Com custo médio de energia elétrica de R$ 5,34 a cada 100KM, economize dinheiro e ajude o meio ambiente. Sem itens de manutenção complexos, economize até 6 vezes mais que carros térmicos. Além disso, a direção suave e silenciosa oferece uma viagem mais confortável. </br>Contribua para um futuro mais limpo e sustentável escolhendo o JAC e-JS1!</p>
+                                <p>
+                                    Viva uma experiência incrível de liberdade com o JAC e-JS1 ! Reduza sua pegada de carbono o JAC e-JS1além de ser o mais barato do Brasil é a escolha ideal para quem quer pertencer ao futuro com tecnologia de ponta foi desenvolvido em parceria com o Grupo Volkswagen, você pode desfrutar de uma viagem econômica, confortável e limpa sem se preocupar com preço dos combustíveis.</p>
                             </div>
                             <div class="saiba-mais">
                             <div class="btn-wrapper saiba">
-                                <a href="https://www.jacmotors.com.br/veiculos/eletricos-detalhes/e-js1" class=" btn btn-primary has-icon"><span>Saiba mais</span><i class="fas fa-arrow-right"></i></a>
+                                <a href="https://youtu.be/MgwONi4OkuU" class=" btn btn-primary has-icon"><span>Saiba mais</span><i class="fas fa-arrow-right"></i></a>
                             </div>
-                            <div class="yt-float">    
+          <!--                   <div class="yt-float">    
                                 <iframe 
                                     id="ytplayer" 
                                     type="text/html" 
@@ -149,7 +122,7 @@
                                     fs="1"
                                   
                                     ></iframe>
-                            </div>
+                            </div> -->
                             </div>
                         </div>
                             <div class="empty-30"></div>
@@ -189,14 +162,14 @@
                         </select>
                     </div>
                   
-                    <div>
+<!--                     <div>
                         <label for="preco-eletricidade">Preço da eletricidade (R$ por 100 KW):</label>
                         <select value="bandeira" type="select" id="preco-eletricidade">
                         <option value="0.65 por" selected>Bandeira verde: R$0.65</option>
                         <option value="2.98">Bandeira amarela: R$2.98</option>
                        
                         </select>
-                    </div>
+                    </div> -->
                   
                         <div>
                             <button type="button" onclick="calcular()">Calcular</button>
@@ -427,7 +400,7 @@
                                 <p>Mais autonomia, menos combustível. Veja os detalhes:</p>
                             </div>
                             <div class="row power-icon">
-                                <div class="col">
+                          <!--       <div class="col">
                                     <div class="icon-img"><img src="../images/MeximumPower-icon.png" alt=""></div>
                                     <h4 class="icon-title text-uppercase">Potência Máxima
                                         </h4>
@@ -435,7 +408,7 @@
                                         45 kW e 62 cv
                                         <span> 150 Nm de torque</span>
                                     </div>
-                                </div>
+                                </div> -->
                                 <div class="col">
                                     <div class="icon-img"><img src="../../images/speed-icon.png" alt=""></div>                                
                                     <h4 class="icon-title text-uppercase">Aceleração
@@ -529,51 +502,6 @@
                                              <option id="noite" value="noite">Noite: 16:00 - 19:00</option>
                                         </div> -->
             </section>
-
-
-            <!-- Find Dealer Section Start - Concessionárias -->
-            <!-- 
-                <section id="dealer" class="dealer-section">
-                 <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="heading-wrapper">
-                                <h2 class="large-heading text-uppercase encontre">Encontre uma concessionária</h2>
-                            </div>
-                            <div class="text-block text-lead">
-                                <p>É muito fácil encontrar uma JAC perto de você. Confira:</p>
-                            </div>
-                        </div>
-                        <div class="col-md-12">
-                            <form class="concessionarias" method="post" action="contactmail1.php">
-                                <div class="form-row">
-                                    <div class="col-md-3 col-sm-6">
-                                        <select name="city" id="city" class="form-control">
-                                            <option value="" disabled selected>Selecione a cidade</option>
-                                            <option id="sp" value='sp'>São Paulo</option>
-                                            <option id="rj" value='rj'>Rio de Janeiro</option>
-                                            <option id="bsb" value='bsb'>Brasília</option>
-                                            <option id="cwb" value='cwb'>Curitiba</option>
-                                            <option id="rec" value='rec'>Recife</option>
-                                            <option id="poa" value='poa'>Porto Alegre</option>
-                                            <option id="flor" value='flor'>Florianópolis</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-md-3 col-sm-6">
-                                        <div class='output'>
-                                            <span id="endereco"></span>
-            
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
-                            
-                        </div>
-                    </div>
-                </div>
-            </section> -->
-            <!-- Find Dealer Section End -->
-       </div>
     </body>
         <!-- Content Section End -->   
         <!--footer Start-->   
@@ -581,7 +509,7 @@
             <div class="footer-widget-area">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-4 col-md-6 col-sm-6">
+                        <!-- <div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="widget">
                                 <div class="widget-heading">
                                     <h4 class="widget-title">Sobre a JAC</h4>
@@ -592,7 +520,7 @@
                                         Aqui você encontra os nossos diversos pontos de contato para tirar dúvidas, fazer reclamações, elogiar ou saber mais sobre nossos produtos e serviços.</p>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                         <div class="col-lg-2 col-md-6 col-sm-6">
                             <div class="widget">
                                 <div class="widget-heading">
@@ -609,7 +537,7 @@
                                 </div>
                             </div>
                         </div>
-                         <div class="col-lg-3 col-md-6 col-sm-6">
+                         <!-- <div class="col-lg-3 col-md-6 col-sm-6">
                             <div class="widget">
                                 <div class="widget-heading">
                                     <h4 class="widget-title">Contato</h4>
@@ -634,7 +562,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                         <div class="col-lg-3 col-md-6 col-sm-6">
                             <div class="widget">
                                 <div class="widget-heading">

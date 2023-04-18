@@ -2,8 +2,8 @@ function calcular() {
     const distancia = parseFloat(document.getElementById('distancia').value);
     const tipoVeiculo = document.querySelector('#consumo').value;
     const precoCombustivel = parseFloat(document.getElementById('preco-combustivel').value);
-    const precoEletricidade = parseFloat(document.querySelector('#preco-eletricidade').value);
-  
+/*     const precoEletricidade = parseFloat(document.querySelector('#preco-eletricidade').value);
+ */  const precoEletricidade = 0.85;
     // Consumo por Km:
 
     const gasCompacto = 15.30; 
