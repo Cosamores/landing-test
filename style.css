@@ -178,7 +178,9 @@ p.text-lead,
 .text-lead > * {
   font-size: 21px;
   line-height: 1.6;
-  text-align: left;
+  text-align: center;
+  height: fit-content;
+  width: 100%;
 }
 b,
 strong {
@@ -1445,16 +1447,17 @@ h2.large-heading span {
 }
 
 .color-section {
-  margin-bottom: 100px;
+  margin: 100px 0 100px 0;
   display: flex;
-  justify-content: right;
+  justify-content: center !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  
 }
-
 .color-section .color-variation-slider .owl-dots {
   position: absolute;
-  top: 30px;
-  left: -500px;
-  margin: 0px;
+  margin: 0;
+
 }
 .color-section .owl-dots button.owl-dot {
   margin-bottom: 10px;
@@ -2865,26 +2868,16 @@ table.specifications tr:last-child th {
   }
 
   .color-section {
-    max-height: 400px;
-    margin: 0 0px 170px 0;
+    max-height: 600px;
+    margin: 0 0px 100px 0;
     display: flex;
     flex-direction: column;
   }
 
-  .color-section .text-block {
-    padding: 0 20px 0 20px;
-  }
   .color-variation-slider img{
     max-width: 640px;
     max-height: 480px;
     margin-top: 0;
-  }
-  .color-section .color-variation-slider .owl-dots {
-    position: absolute;
-    top: -20px;
-    left: 0;
-    margin-top: 0px;
-    
   }
 
   .calculator {
