@@ -61,6 +61,8 @@ Table of Contents
   border-radius: 50%;
 }
 .st-preloader-wave img {
+  transform: translate3d(0, 0, 0);;
+  transform-origin: 40px 40px;
   -webkit-transform: translate3d(0, 0, 0);
   -webkit-transform-origin: 40px 40px;
   -webkit-transform: translate3d(0, 0, 0);
@@ -490,6 +492,7 @@ h5 {
 .container {
   max-width: 1920px;
   width: 100%;
+  display: flex;
 }
 .small-container {
   max-width: 1200px;
@@ -699,6 +702,7 @@ button:focus {
 
 button,
 select {
+  appearance: none;
   -moz-appearance: none;
   -webkit-appearance: none;
 }
@@ -1190,6 +1194,7 @@ h2.large-heading span {
   background: url(images/play-btn.png) no-repeat var(--main-color) center center;
   cursor: pointer;
   z-index: 1;
+  backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   transition: transform 0.4s ease;
 }
@@ -1226,6 +1231,7 @@ h2.large-heading span {
   background: url(images/play-btn.png) no-repeat var(--main-color) center center;
   cursor: pointer;
   z-index: 1;
+  backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   transition: transform 0.4s ease;
 }
@@ -1557,10 +1563,12 @@ h2.large-heading span {
 }
 
 .yt-float {
-  flex: 1;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
 }
 
-#ytplayer {
+#iframe {
   width: 480px;
   height: 240px;
 }
@@ -1618,6 +1626,7 @@ select option {
   font-family: "Poppins", sans-serif;
   font-size: 15px;
   color: var(--black-color);
+  appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
 }
@@ -2025,6 +2034,7 @@ table.specifications tr:last-child th {
 }
 .gallery-slider.owl-carousel .owl-dots {
   text-align: center;
+  width: 2004;
 }
 .gallery-slider.owl-carousel button.owl-dot {
   outline: none !important;
@@ -2350,7 +2360,7 @@ table.specifications tr:last-child th {
   border-radius: 5%;
   margin-bottom: 5px;
   padding-bottom: 15px;
-  width: 140px;
+  width: 150px;
   text-align: center;
   background-color: var(--dark-gray);
 }
@@ -2914,13 +2924,13 @@ table.specifications tr:last-child th {
   .info {
     display: flex;
     flex-direction: row;
-    width: 70%;
+    width: 75%;
     height: auto;
     justify-content: space-evenly;
     gap: 10px;
     padding-left: 20px;
     color: #f5f6f8;
-    padding-right: 20px;
+    padding-right: 10px;
   }
 
 
