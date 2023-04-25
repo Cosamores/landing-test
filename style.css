@@ -1045,6 +1045,11 @@ header.fixed .logo img.sticky-logo {
   -webkit-text-shadow: 6px 6px 7.83px rgba(0, 0, 0, 0.18);
   text-shadow: 6px 6px 7.83px rgba(0, 0, 0, 0.18);
   line-height: 1;
+  white-space: nowrap;
+}
+
+.btn {
+  z-index: 99;
 }
 h1.large-heading {
   font-size: 6.75rem;
