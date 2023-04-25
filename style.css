@@ -493,6 +493,7 @@ h5 {
   max-width: 1920px;
   width: 100%;
   display: flex;
+  align-items: center;
 }
 .small-container {
   max-width: 1200px;
@@ -1059,7 +1060,7 @@ h1.large-heading span {
   font-size: 3.75rem;
 }
 h2.large-heading {
-  font-size: 6.25rem;
+  font-size: 4.25rem;
   line-height: 1;
   padding-top: 30px;
 }
@@ -1091,6 +1092,9 @@ h2.large-heading span {
 }
 .heading-wrapper {
   margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 .light-text,
 .light-text * {
@@ -1182,6 +1186,12 @@ h2.large-heading span {
   top: 0;
   left: 0;
   bottom: 0;
+  
+}
+
+.color-variation-slider img {
+  width: 1920px;
+  height: 1080px;
 }
 .morevideo-slider.owl-carousel .owl-video-play-icon {
   position: absolute;
@@ -1450,14 +1460,30 @@ h2.large-heading span {
 
 .power-section {
   padding-bottom: 30px;
+  align-items: center;
+  justify-content: center;
+}
+
+.technology-section {
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  flex-direction: column;
+}
+.yt-player {
+  width: 100%;
+  height:480px;
+
 }
 
 .color-section {
   margin: 100px 0 100px 0;
   display: flex;
-  justify-content: center !important;
-  flex-direction: column !important;
-  align-items: center !important;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   
 }
 .color-section .color-variation-slider .owl-dots {
@@ -1931,7 +1957,7 @@ table.specifications tr:last-child th {
   -webkit-border-radius: 50%;
   border-radius: 50%;
   background: var(--main-color);
-  margin: 0px 10px;
+  margin: 10px 10px;
 }
 .color-variation-slider .owl-dots button:focus {
   outline: none;
@@ -1964,7 +1990,10 @@ table.specifications tr:last-child th {
 .color-section .owl-dots button.owl-dot.active {
   animation: ripple 1s linear infinite;
 }
-
+.color-variation-slider img {
+  max-width: 920px;
+  max-height: 580px;
+}
 .variation-section .color-variation-slider {
   max-width: 1170px;
   margin: auto;
@@ -2034,7 +2063,6 @@ table.specifications tr:last-child th {
 }
 .gallery-slider.owl-carousel .owl-dots {
   text-align: center;
-  width: 2004;
 }
 .gallery-slider.owl-carousel button.owl-dot {
   outline: none !important;
@@ -2133,9 +2161,15 @@ table.specifications tr:last-child th {
 .site-footer {
   background: var(--black-color);
   color: var(--dark-gray-2);
+  padding: 0 0 0 50px;
+  display: flex;
+  flex-direction: column;
+
 }
 .site-footer .footer-widget-area {
   padding: 50px 0px 30px;
+
+  
 }
 .site-footer a {
   color: var(--dark-gray-2);
@@ -2145,7 +2179,8 @@ table.specifications tr:last-child th {
 }
 
 .footer-logo {
-  max-height: 50px;
+  height:fit-content;
+  width: 570px;
   margin-bottom: 30px;
 }
 .widget-heading {
@@ -2356,8 +2391,14 @@ table.specifications tr:last-child th {
   padding-left: 30px;
 }
 
+.info-titulo {
+  background-color: #00a9e0;
+  height: 70px;
+  border-radius: 10px;
+}
+
 .card {
-  border-radius: 5%;
+  border-radius: 10px;
   margin-bottom: 5px;
   padding-bottom: 15px;
   width: 150px;
@@ -2812,7 +2853,7 @@ table.specifications tr:last-child th {
   }
   .color-section .color-variation-slider .owl-dots {
     position: absolute;
-    top: 20%;
+    top: 10%;
     left: -30%;
     margin-top: 0px;
     width: 50px;
@@ -2858,12 +2899,6 @@ table.specifications tr:last-child th {
     padding-left: 45px;
     padding-top: 0;
   }
-  /*     .yt-float {  margin-left: 0 !important;    }
- */
-  #ytplayer {
-    width: 192px;
-    height: 144px;
-  }
   /* --------------------------------- */
 
   .logo img {
@@ -2877,16 +2912,25 @@ table.specifications tr:last-child th {
     display: none;
   }
 
+  .technology-section {
+    max-width: 100%;
+    display: flex;
+  }
+  .yt-player {
+    width: 100%;
+    height:fit-content;
+  }
   .color-section {
-    max-height: 600px;
+    max-height: 700px;
     margin: 0 0px 100px 0;
     display: flex;
     flex-direction: column;
+
   }
 
   .color-variation-slider img{
-    max-width: 640px;
-    max-height: 480px;
+    max-width: 540px;
+    max-height: 380px;
     margin-top: 0;
   }
 
@@ -2959,11 +3003,12 @@ table.specifications tr:last-child th {
     height: fit-content;
   }
   .economia-total-mobile {
+    width: 100%;
     display: flex;
     flex-direction: row;
     bottom: 10%;
     background-color: var(--dark-gray);
-    border-radius: 5%;
+    border-radius: 10px;
     align-items: center;
     justify-content: center;
     padding: 10px;
@@ -3022,6 +3067,7 @@ table.specifications tr:last-child th {
 
   .economia-label {
     padding: 10px;
+    max-width: 30%;
   }
 
   .nota {
@@ -3030,7 +3076,24 @@ table.specifications tr:last-child th {
     padding-bottom: 30px;
   }
 
+  .power-icon {
+    padding: 0 0 0 30px;
+  }
   .engine-ico {
     padding-top: 0;
+  }
+
+  .site-footer {
+    padding: 20px;
+  }
+
+  .footer-logo {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  section {
+    max-width: 100%;
+    padding: 10px;
   }
 }
