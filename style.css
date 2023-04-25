@@ -1589,7 +1589,7 @@ h2.large-heading span {
   display: flex;
   margin: 0;
   justify-content: center;
-  text-align: center;
+  text-align: justify;
   
 }
 .saiba-mais {
