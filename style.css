@@ -775,11 +775,20 @@ header.fixed {
   padding-top: 50px;
   padding-bottom: 20px;
   z-index: 99;
+  left: 40%;
+  
 }
+
+.preco {
+  font-size: 38px !important;
+  vertical-align:text-top;
+  border-bottom: none !important;
+}
+
 .logo img {
   max-height: 70px;
-  display: block;
 }
+
 .logo img.regular-logo {
   display: block;
 }
@@ -913,6 +922,12 @@ header.fixed .logo img.sticky-logo {
   transition: all 400ms;
   padding: 10px;
 }
+
+.site-navigation {
+  display: flex;
+  justify-content: right;
+  width: 90%;
+}
 .site-navigation .main-menu li:hover .sub-menu {
   opacity: 1;
   visibility: visible;
@@ -1012,6 +1027,7 @@ header.fixed .logo img.sticky-logo {
   overflow: hidden;
   border-radius: inherit;
   background-clip: padding-box;
+
 }
 .section-background .background-wrapper .background-inner {
   position: absolute;
@@ -1031,12 +1047,12 @@ header.fixed .logo img.sticky-logo {
   right: 0;
   background-size: cover;
   background-position: center;
-  max-height: 600px;
 }
+
 .overlay-bg,
 .background-inner,
 .background-wrapper {
-  height: fit-content;
+  max-height: fit-content;
 }
 
 .top-sub-heading {
@@ -1484,7 +1500,7 @@ h2.large-heading span {
 }
 
 .color-section {
-  margin: 100px 0 100px 0;
+  margin: 50px 0 100px 0;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -1954,15 +1970,19 @@ table.specifications tr:last-child th {
 .color-variation-slider .owl-dots {
   text-align: center;
   margin-top: 30px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 .color-variation-slider .owl-dots button.owl-dot {
-  min-width: inherit;
+  min-width: 32px;
   height: 32px;
   width: 32px;
   -webkit-border-radius: 50%;
   border-radius: 50%;
   background: var(--main-color);
-  margin: 10px 10px;
+  margin: 10px 20px;
 }
 .color-variation-slider .owl-dots button:focus {
   outline: none;
@@ -1996,17 +2016,18 @@ table.specifications tr:last-child th {
   animation: ripple 1s linear infinite;
 }
 .color-variation-slider img {
-  max-width: 920px;
-  max-height: 580px;
+  width: 100%;
+  height: 100%;
 }
 .variation-section .color-variation-slider {
-  max-width: 1170px;
+  width: 100%;
+  height: 100%;
   margin: auto;
 }
 .variation-section .color-variation-slider .owl-dots {
   position: absolute;
   top: 0;
-  margin: 0 0 0 50px;
+  margin: 0 0 0 150px;
   right: 100%;
   width: 50px;
 }
@@ -2407,8 +2428,9 @@ table.specifications tr:last-child th {
   margin-bottom: 5px;
   padding-bottom: 15px;
   width: 150px;
-  text-align: center;
+  text-align:center;
   background-color: var(--dark-gray);
+  vertical-align:top;
 }
 
 .economia-total-mobile {
@@ -2416,8 +2438,20 @@ table.specifications tr:last-child th {
 }
 
 .economia-total-pc {
-  width: fit-content;
+  display: flex;
+  vertical-align: text-top;
+
 } 
+.economia-total-pc .info-titulo {
+  margin: 0;
+  
+}
+
+.economia-total-pc .economia-label .card{
+  margin: 0 auto;
+  
+  
+}
 
 .nota {
   font-size: 14px;
@@ -2509,10 +2543,6 @@ table.specifications tr:last-child th {
   font-size: 22px !important;
   border-bottom: 1px solid #0178e6;
 }
-
-.economia-label {
-  padding: 10px;
-} 
 
 .economia-label:hover {
   color: #3e8e41;
@@ -2848,24 +2878,6 @@ table.specifications tr:last-child th {
   }
 }
 
-@media (min-width: 1000px) {
-  .color-section {
-    max-height: 600px;
-  }
-  .color-variation-slider img {
-    max-width: 720px;
-    max-height: 480px;
-  }
-  .color-section .color-variation-slider .owl-dots {
-    position: absolute;
-    top: 10%;
-    left: -30%;
-    margin-top: 0px;
-    width: 50px;
-    
-  }
-}
-
 @media only screen and (min-width: 270px) and (max-width: 1000px) {
   #foglayer_01 .image01,
   #foglayer_01 .image02,
@@ -2883,6 +2895,14 @@ table.specifications tr:last-child th {
   .mobile {
     display: block;
     width: 100%;
+  }
+
+  .logo {
+    left: 5%;
+  }
+  
+  .preco {
+    font-size: 20px !important;
   }
   /* ----- ------------- ---- */
 
@@ -2933,9 +2953,13 @@ table.specifications tr:last-child th {
 
   }
 
+  .color-variation-slider .owl-dots button.owl-dot {
+    margin: 10px 10px;
+  }
+
   .color-variation-slider img{
-    max-width: 540px;
-    max-height: 380px;
+    max-width: 100%;
+    max-height: 100%;
     margin-top: 0;
   }
 
